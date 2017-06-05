@@ -8,6 +8,7 @@
 		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
 		<script>
 			$(document).ready(function(){
+				//设置轮播图
 				var images=$(".carousel ul li");
 				var img_l=images.length;
 				for (var i=0;i<img_l;i++) {
@@ -22,6 +23,39 @@
 					$(".carousel div").children().removeClass("active").eq(index).addClass("active");
 					images.eq(index).fadeIn(200)
 				},3000);
+				//设置课程导航的二级菜单
+				var nav=$(".nav-a>ul li");
+				var subNav=$(".a-sub-nav>ul>li");
+				//点击nav实现subNav的显示与隐藏
+				nav.hover(function(){
+					var inda=$(this).index();
+					if (inda>0) {
+						subNav.hide();
+						subNav.eq(inda-1).show()
+					} else{
+						return
+					}
+				},function(){
+					subNav.hide()
+				})
+				//鼠标离开自身,自身才消失
+				subNav.hover(function(){
+					$(this).show()
+				},function(){
+					subNav.hide()
+					
+				});
+				//设置新闻的子页的显示与隐藏
+				var newsNav=$(".news-nav li");
+				var newsContent=$(".news-content");
+				
+				newsNav.mousemove(function(){
+					var ind=$(this).index();
+					newsNav.removeClass("active");
+					$(this).addClass("active");
+					newsContent.hide();
+					newsContent.eq(ind).show();
+				});
 			})
 		</script>
 	</head>
@@ -84,17 +118,450 @@
 			<div class="pic">
 			</div>
 		</div>	
-		<div class="nav w">
+		<div class="nav w clear">
 			<div class="nav-a">
-				
+				<ul id="ul11">
+					<li><span class="fa fa-reorder "></span>课程导航</li>
+					<li>平面  UI<a href="#">PS</a><a href="#">AI</a></li>
+					<li>电商网销<a href="#">淘宝</a><a href="#">SEO</a></li>
+					<li>网页设计<a href="#">DW</a><a href="#">HTML5</a></li>
+					<li>室内景观<a href="#">CAD</a><a href="#">3D</a></li>
+					<li>淘宝美工<a href="#">美工</a><a href="#">摄影</a></li>
+					<li>机械模具<a href="#">UG</a><a href="#">CATIA</a></li>
+					<li>服装设计<a href="#">制版</a><a href="#">立裁</a></li>
+					<li>影视美工<a href="#">影视</a><a href="#">美术</a></li>
+					<li>网络工程<a href="#">思科</a><a href="#">MCSE</a></li>
+					<li>学历企培<a href="#">本科</a><a href="#">办公</a></li>
+				</ul>				
+				<div class="a-sub-nav">
+					<ul class="clear">
+						<li class="clear">
+							<ul class="a-one-nav left">
+								<li><a href="#">平面设计全科班</a></li>
+								<li><a href="#">创意广告设计精品班</a></li>
+							</ul>
+							<ul class="a-two-nav right">
+								<li><a href="#">商业广告设计全科班</a></li>
+								<li><a href="#">高级UI交互设计就业</a></li>
+							</ul>
+						</li>
+						<li class="clear">
+							<ul class="a-one-nav left">
+								<li><a href="#">淘宝运营实战班(电子商务A)</a></li>
+								<li><a href="#">电商运营操盘高阶班</a></li>
+								<li><a href="#">商城运营高级班</a></li>
+								<li><a href="#">SEO优化精品班</a></li>
+								<li><a href="#">全网营销大师班</a></li>
+							</ul>
+							<ul class="a-two-nav right">
+								<li><a href="#">淘宝运营实战班(电子商务B)</a></li>
+								<li><a href="#">微营销实战班</a></li>
+								<li><a href="#">Seo优化实战班</a></li>
+								<li><a href="#">网络营销实战班</a></li>
+								<li><a href="#">高级网络营销就业班</a></li>
+							</ul>
+						</li>
+						<li class="clear">
+							<ul class="a-one-nav left">
+								<li><a href="#">网页设计师全科班</a></li>
+								<li><a href="#">网页美工设计实战班</a></li>
+								<li><a href="#">WEB前端工程师精品班</a></li>
+							</ul>
+							<ul class="a-two-nav right">
+								<li><a href="#">PHP网站开发工程师</a></li>
+								<li><a href="#">网页美工设计精品班</a></li>
+								<li><a href="#">高级网页设计就业班</a></li>
+							</ul>
+						</li>
+						<li class="clear">
+							<ul class="a-one-nav left">
+								<li><a href="#">CAD室内制图全科班</a></li>
+								<li><a href="#">室内外效果图表现班</a></li>
+								<li><a href="#">软装设计精品班</a></li>
+								<li><a href="#">SketchUp景观设计实战班</a></li>
+								<li><a href="#">景观手绘效果图全科班</a></li>
+							</ul>
+							<ul class="a-two-nav right">
+								<li><a href="#">3DMAX效果图全科班</a></li>
+								<li><a href="#">室内手绘效果图班</a></li>
+								<li><a href="#">室内设计精品班</a></li>
+								<li><a href="#">高级室内设计就业班</a></li>
+								<li><a href="#">高级景观设计全程班</a></li>
+							</ul>
+						</li>
+						<li class="clear">
+							<ul class="a-one-nav left">
+								<li><a href="#">淘宝商品摄影美化班</a></li>
+								<li><a href="#">淘宝美工设计实战班</a></li>
+							</ul>
+							<ul class="a-two-nav right">
+								<li><a href="#">数码摄影精品班</a></li>
+								<li><a href="#">淘宝美工设计精品班</a></li>
+							</ul>
+						</li>
+						<li class="clear">
+							<ul class="a-one-nav left">
+								<li><a href="#">CAD机械制图实战</a></li>
+								<li><a href="#">UG模具设计全能班</a></li>
+								<li><a href="#">Catia模具设计全科班</a></li>
+								<li><a href="#">高级模具设计全程班</a></li>
+								<li><a href="#">Ansys有限元分析标准班</a></li>
+							</ul>
+							<ul class="a-two-nav right">
+								<li><a href="#">模具工业设计手绘</a></li>
+								<li><a href="#">Solidworks模具设计全科班</a></li>
+								<li><a href="#">Pro/e/Creo模具设计实战</a></li>
+								<li><a href="#">Ansys有限元分析提高班</a></li>
+								<li><a href="#">inventor实战班</a></li>
+							</ul>
+						</li>
+						<li class="clear">
+							<ul class="a-one-nav left">
+								<li><a href="#">服装CAD</a></li>
+								<li><a href="#">数码服装设计全科班</a></li>
+								<li><a href="#">服装制版全科班</a></li>
+								<li><a href="#">高级服装设计全程班</a></li>
+							</ul>
+							<ul class="a-two-nav right">
+								<li><a href="#">服装设计立体裁剪</a></li>
+								<li><a href="#">手绘服装设计全科班</a></li>
+								<li><a href="#">服装设计精品班</a></li>
+							</ul>
+						</li>
+						<li class="clear">
+							<ul class="a-one-nav left">
+								<li><a href="#">国画/油画系列</a></li>
+								<li><a href="#">美术中级套餐班</a></li>
+								<li><a href="#">Adobe视频设计师</a></li>
+								<li><a href="#">影视后期精品班</a></li>
+							</ul>
+							<ul class="a-two-nav right">
+								<li><a href="#">美术高级套餐班</a></li>
+								<li><a href="#">美术初级套餐班</a></li>
+								<li><a href="#">影视后期全科班</a></li>
+							</ul>
+						</li>
+						<li class="clear">
+							<ul class="a-one-nav left">
+								<li><a href="#">电脑组装组网全科班</a></li>
+								<li><a href="#">思科CCNP认证网络工程师</a></li>
+								<li><a href="#">微软MCSE网络工程师</a></li>
+								<li><a href="#">易语言编程班</a></li>
+								<li><a href="#">高级网络工程师全程班</a></li>
+							</ul>
+							<ul class="a-two-nav right">
+								<li><a href="#">思科CCNA网络工程师</a></li>
+								<li><a href="#">RedHat Linux网络工程师</a></li>
+								<li><a href="#">SQL2012数据裤管理</a></li>
+								<li><a href="#">高级网络工程师精品班</a></li>
+							</ul>
+						</li>
+						<li class="clear">
+							<ul class="a-one-nav left">
+								<li><a href="#">办公自动化班</a></li>
+								<li><a href="#">办公自动化VIP班</a></li>
+								<li><a href="#">山东大学网络教育2017年招生简章</a></li>
+								<li><a href="#">华中师范大学2017年网络教育招生简章</a></li>
+								<li><a href="#">华东政法大学《金融管理》自考专升本</a></li>
+							</ul>
+							<ul class="a-two-nav right">
+								<li><a href="#">办公自动化全科班</a></li>
+								<li><a href="#">商务办公精品班</a></li>
+								<li><a href="#">上海交通大学网络教育2017年招生简章</a></li>
+								<li><a href="#">上海还是大学2017年成人教育</a></li>
+								<li><a href="#">复旦大学《护理学》自考专升本</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
 			</div>
 			<div class="nav-b">
-				
+				<ul class="news-nav">
+					<li class="active">学院动态</li>
+					<li>行业观察</li>
+					<li>学习资讯</li>
+				</ul>
+				<div class="box-new">
+					
+
+				<ul class="news-content clear one ">
+					<li>
+						<div class="left">
+							<img src="img/tp-tx1.jpg"/>
+							<span>12-13</span>
+						</div>
+						<div class="right">
+							<h1>2017有你更精彩—我院杭州宋城团建旅游行</h1>
+							<p>为更好的促进我我院企业文化的发展与传承，增强员工的归属感和团队意识，让员工在紧张的...</p>
+						</div>
+					</li>
+					<li>
+						<div class="left">
+							<img src="img/tp-tx1.jpg"/>
+							<span>12-13</span>
+						</div>
+						<div class="right">
+							<h1>2017有你更精彩—我院杭州宋城团建旅游行</h1>
+							<p>为更好的促进我我院企业文化的发展与传承，增强员工的归属感和团队意识，让员工在紧张的...</p>
+						</div>
+					</li>
+					<li>
+						<div class="left">
+							<img src="img/tp-tx1.jpg"/>
+							<span>12-13</span>
+						</div>
+						<div class="right">
+							<h1>2017有你更精彩—我院杭州宋城团建旅游行</h1>
+							<p>为更好的促进我我院企业文化的发展与传承，增强员工的归属感和团队意识，让员工在紧张的...</p>
+						</div>
+					</li>
+					<li>
+						<div class="left">
+							<img src="img/tp-tx1.jpg"/>
+							<span>12-13</span>
+						</div>
+						<div class="right">
+							<h1>2017有你更精彩—我院杭州宋城团建旅游行</h1>
+							<p>为更好的促进我我院企业文化的发展与传承，增强员工的归属感和团队意识，让员工在紧张的...</p>
+						</div>
+					</li>
+					<li>
+						<div class="left">
+							<img src="img/tp-tx1.jpg"/>
+							<span>12-13</span>
+						</div>
+						<div class="right">
+							<h1>2017有你更精彩—我院杭州宋城团建旅游行</h1>
+							<p>为更好的促进我我院企业文化的发展与传承，增强员工的归属感和团队意识，让员工在紧张的...</p>
+						</div>
+					</li>
+					<li>
+						<div class="left">
+							<img src="img/tp-tx1.jpg"/>
+							<span>12-13</span>
+						</div>
+						<div class="right">
+							<h1>2017有你更精彩—我院杭州宋城团建旅游行</h1>
+							<p>为更好的促进我我院企业文化的发展与传承，增强员工的归属感和团队意识，让员工在紧张的...</p>
+						</div>
+					</li>
+					<li>
+						<div class="left">
+							<img src="img/tp-tx1.jpg"/>
+							<span>12-13</span>
+						</div>
+						<div class="right">
+							<h1>2017有你更精彩—我院杭州宋城团建旅游行</h1>
+							<p>为更好的促进我我院企业文化的发展与传承，增强员工的归属感和团队意识，让员工在紧张的...</p>
+						</div>
+					</li>
+					<li>
+						<div class="left">
+							<img src="img/tp-tx1.jpg"/>
+							<span>12-13</span>
+						</div>
+						<div class="right">
+							<h1>2017有你更精彩—我院杭州宋城团建旅游行</h1>
+							<p>为更好的促进我我院企业文化的发展与传承，增强员工的归属感和团队意识，让员工在紧张的...</p>
+						</div>
+					</li>
+					
+				</ul>
+				<ul class="news-content clear two">
+					<li>
+						<div class="left">
+							<img src="img/tp-tx2.jpg"/>
+							<span>12-13</span>
+						</div>
+						<div class="right">
+							<h1>2017有你更精彩—我院杭州宋城团建旅游行</h1>
+							<p>为更好的促进我我院企业文化的发展与传承，增强员工的归属感和团队意识，让员工在紧张的...</p>
+						</div>
+					</li>
+					<li>
+						<div class="left">
+							<img src="img/tp-tx2.jpg"/>
+							<span>12-13</span>
+						</div>
+						<div class="right">
+							<h1>2017有你更精彩—我院杭州宋城团建旅游行</h1>
+							<p>为更好的促进我我院企业文化的发展与传承，增强员工的归属感和团队意识，让员工在紧张的...</p>
+						</div>
+					</li>
+					<li>
+						<div class="left">
+							<img src="img/tp-tx2.jpg"/>
+							<span>12-13</span>
+						</div>
+						<div class="right">
+							<h1>2017有你更精彩—我院杭州宋城团建旅游行</h1>
+							<p>为更好的促进我我院企业文化的发展与传承，增强员工的归属感和团队意识，让员工在紧张的...</p>
+						</div>
+					</li>
+					<li>
+						<div class="left">
+							<img src="img/tp-tx2.jpg"/>
+							<span>12-13</span>
+						</div>
+						<div class="right">
+							<h1>2017有你更精彩—我院杭州宋城团建旅游行</h1>
+							<p>为更好的促进我我院企业文化的发展与传承，增强员工的归属感和团队意识，让员工在紧张的...</p>
+						</div>
+					</li>
+					<li>
+						<div class="left">
+							<img src="img/tp-tx2.jpg"/>
+							<span>12-13</span>
+						</div>
+						<div class="right">
+							<h1>2017有你更精彩—我院杭州宋城团建旅游行</h1>
+							<p>为更好的促进我我院企业文化的发展与传承，增强员工的归属感和团队意识，让员工在紧张的...</p>
+						</div>
+					</li>
+					<li>
+						<div class="left">
+							<img src="img/tp-tx2.jpg"/>
+							<span>12-13</span>
+						</div>
+						<div class="right">
+							<h1>2017有你更精彩—我院杭州宋城团建旅游行</h1>
+							<p>为更好的促进我我院企业文化的发展与传承，增强员工的归属感和团队意识，让员工在紧张的...</p>
+						</div>
+					</li>
+					<li>
+						<div class="left">
+							<img src="img/tp-tx2.jpg"/>
+							<span>12-13</span>
+						</div>
+						<div class="right">
+							<h1>2017有你更精彩—我院杭州宋城团建旅游行</h1>
+							<p>为更好的促进我我院企业文化的发展与传承，增强员工的归属感和团队意识，让员工在紧张的...</p>
+						</div>
+					</li>
+					<li>
+						<div class="left">
+							<img src="img/tp-tx2.jpg"/>
+							<span>12-13</span>
+						</div>
+						<div class="right">
+							<h1>2017有你更精彩—我院杭州宋城团建旅游行</h1>
+							<p>为更好的促进我我院企业文化的发展与传承，增强员工的归属感和团队意识，让员工在紧张的...</p>
+						</div>
+					</li>
+					
+				</ul>
+				<ul class="news-content clear three">
+					<li>
+						<div class="left">
+							<img src="img/tp-tx3.jpg"/>
+							<span>12-13</span>
+						</div>
+						<div class="right">
+							<h1>2017有你更精彩—我院杭州宋城团建旅游行</h1>
+							<p>为更好的促进我我院企业文化的发展与传承，增强员工的归属感和团队意识，让员工在紧张的...</p>
+						</div>
+					</li>
+					<li>
+						<div class="left">
+							<img src="img/tp-tx3.jpg"/>
+							<span>12-13</span>
+						</div>
+						<div class="right">
+							<h1>2017有你更精彩—我院杭州宋城团建旅游行</h1>
+							<p>为更好的促进我我院企业文化的发展与传承，增强员工的归属感和团队意识，让员工在紧张的...</p>
+						</div>
+					</li>
+					<li>
+						<div class="left">
+							<img src="img/tp-tx3.jpg"/>
+							<span>12-13</span>
+						</div>
+						<div class="right">
+							<h1>2017有你更精彩—我院杭州宋城团建旅游行</h1>
+							<p>为更好的促进我我院企业文化的发展与传承，增强员工的归属感和团队意识，让员工在紧张的...</p>
+						</div>
+					</li>
+					<li>
+						<div class="left">
+							<img src="img/tp-tx3.jpg"/>
+							<span>12-13</span>
+						</div>
+						<div class="right">
+							<h1>2017有你更精彩—我院杭州宋城团建旅游行</h1>
+							<p>为更好的促进我我院企业文化的发展与传承，增强员工的归属感和团队意识，让员工在紧张的...</p>
+						</div>
+					</li>
+					<li>
+						<div class="left">
+							<img src="img/tp-tx3.jpg"/>
+							<span>12-13</span>
+						</div>
+						<div class="right">
+							<h1>2017有你更精彩—我院杭州宋城团建旅游行</h1>
+							<p>为更好的促进我我院企业文化的发展与传承，增强员工的归属感和团队意识，让员工在紧张的...</p>
+						</div>
+					</li>
+					<li>
+						<div class="left">
+							<img src="img/tp-tx3.jpg"/>
+							<span>12-13</span>
+						</div>
+						<div class="right">
+							<h1>2017有你更精彩—我院杭州宋城团建旅游行</h1>
+							<p>为更好的促进我我院企业文化的发展与传承，增强员工的归属感和团队意识，让员工在紧张的...</p>
+						</div>
+					</li>
+					<li>
+						<div class="left">
+							<img src="img/tp-tx3.jpg"/>
+							<span>12-13</span>
+						</div>
+						<div class="right">
+							<h1>2017有你更精彩—我院杭州宋城团建旅游行</h1>
+							<p>为更好的促进我我院企业文化的发展与传承，增强员工的归属感和团队意识，让员工在紧张的...</p>
+						</div>
+					</li>
+					<li>
+						<div class="left">
+							<img src="img/tp-tx3.jpg"/>
+							<span>12-13</span>
+						</div>
+						<div class="right">
+							<h1>2017有你更精彩—我院杭州宋城团建旅游行</h1>
+							<p>为更好的促进我我院企业文化的发展与传承，增强员工的归属感和团队意识，让员工在紧张的...</p>
+						</div>
+					</li>
+					
+				</ul>
+				</div>
 			</div>
 			<div class="nav-c">
-				
+				<p>热门课程</p>
+				<div>
+					<img src="img/news-tp1.jpg"/>
+					<div>
+						<h1>UL交互设计</h1>
+						<p>高薪职业,不学可惜</p>
+					</div>
+				</div>
+				<div>
+					<img src="img/news-tp2.jpg"/>
+					<div>
+						<h1>淘宝美工设计</h1>
+						<p>高薪职业,不学可惜</p>
+					</div>
+				</div>
+				<div>
+					<img src="img/news-tp3.jpg"/>
+					<div>
+						<h1>网络教育学历</h1>
+						<p>高薪职业,不学可惜</p>
+					</div>
+				</div>
 			</div>
 		</div>
-
+		<div class="aaa" style="height: 300px;width: 300px;">
+			
+		</div>
 	</body>
 </html>

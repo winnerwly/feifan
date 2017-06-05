@@ -1,4 +1,6 @@
 *{
+	transition: all 0.3s;
+	
 	margin: 0px;
 	padding: 0px;
 }
@@ -40,7 +42,7 @@ li{
 .top .w .left li{
 	text-align: center;
 	width: 56px;
-	padding: 0 10px;
+	padding: 0 16px;
 	float: left;
 	position: relative;
 }
@@ -53,18 +55,23 @@ li{
 .top .w .left li:hover .sub-nav{
 	display: block;
 }
+.top .w .left li .sub-nav a{
+	color: #333333;
+}
 .top .w .left li .sub-nav{
+	z-index: 999;
 	display: none;
 	position: absolute;
 	top: 38px;
 	left: 0px;
-	background-color: #ccc;
+	background-color: #FFFFFF;
 }
 .top .w .left li .sub-nav li{
 	float:none ;
 }
 .top .w .left li .sub-nav li:hover{
 	background-color: #FFFFFF;
+	z-index: 9999;
 }
 .top .w .left li .sub-nav li:hover a{
 	color: red;
@@ -160,31 +167,227 @@ li{
 /*导航*/
 .nav{
 	margin-top: 30px;
-	background-color: #CCCCCC;
+	/*background-color: #CCCCCC;*/
 	height: 450px;
 	position: relative;
 }
 /**/
 .nav .nav-a{
 	width: 220px;
-	background-color: red;
+	/*background-color: red;*/
 	height: inherit;
 	position: absolute;
 	top: 0;
 	left: 0;
 }
 .nav .nav-b{
-	/*padding: 0px 228px 0px 240px;*/
+	
 	padding-left: 240px;
 	padding-right: 228px;
-	height: inherit;
-	background-color: green;
 }
 .nav .nav-c{
 	width: 200px;
 	height: inherit;
-	background-color: yellow;
 	position: absolute;
 	top: 0;
 	right: 0;
+}
+/*nav-a的属性设置*/
+.nav .nav-a{}
+.nav .nav-a>ul{}
+.nav .nav-a>ul li{
+	font-size: 16px;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #d8d8d8;
+	border-left: 1px solid #d8d8d8;
+	border-right: 1px solid #d8d8d8;
+	padding-left: 22px;
+}
+
+.nav .nav-a>ul li:hover{
+	color: #DD2727;
+	background-color: #EEEEEE;
+}
+.nav .nav-a>ul li a:hover{
+	color: #DD2727;
+}
+.nav .nav-a>ul li a{
+	color: #535353;
+	font-size: 12px;
+	display: inline-block;
+	margin-left: 26px;
+}
+.nav .nav-a>ul li:first-child span{
+	display: inline-block;
+	margin-right: 20px;
+}
+.nav .nav-a>ul li:first-child{
+	color: #FFFFFF;
+	box-sizing: border-box;
+	background-color: #DD2727;
+}
+.nav .nav-a>ul li:first-child:hover{
+	color: #FFFFFF;
+}
+.nav .nav-a>li:first-child{
+	background-color: #DD2727;
+	border-left:none;
+	border-right:none;
+}
+/*设置左侧导航栏弹出页*/
+.a-sub-nav{
+	height: 411px;
+	width: 641px;
+	box-sizing: border-box;
+	overflow: hidden;
+	position: absolute;
+	top: 39px;
+	left: 220px;
+}
+.a-sub-nav ul{
+	height: inherit;
+}
+.a-sub-nav>ul>li{
+	z-index: 99;
+	display: none;
+	height: 411px;
+	width: 641px;
+	border: 1px #ccc solid;
+	border-left: none;
+	box-sizing: border-box;
+	padding:20px ;
+	position: absolute;
+	background-color: #FFFFFF;
+}
+.a-sub-nav ul li ul{
+	width: 290px;
+	height: 100px;
+}
+.a-sub-nav ul li ul li{
+	height: 60px;
+	border-top: 1px #ccc solid;
+	font-size: 14px;
+}
+.a-sub-nav ul li ul li a{
+	padding-left:20px ;
+	line-height: 20px;
+}
+/*nav-b部分*/
+.nav-b{
+	position: relative;
+}
+.nav-b .news-nav{
+	cursor: pointer;
+	height: 39px;
+	border-bottom: 1px solid #ccc;
+}
+.nav-b .news-nav li{
+	transition: 0s;
+	font-size: 16px;
+	line-height: 39px;
+	float: left;
+	padding: 0px 22px;
+}
+.nav-b .news-nav .active{
+	color: #dd2727;
+	border-bottom: 2px solid #dd2727;
+}
+.nav-b .news-content{
+	cursor: pointer;
+	padding: 0;
+	position: absolute;
+	top: 41px;
+	left: 240px;
+}
+.nav-b .news-content li{
+	float: left;
+	width: 366px;
+	height: 102px;
+	box-sizing:border-box;
+	padding: 18px 20px 0px 6px;
+}
+.nav-b .news-content{
+	display: none;
+}
+.nav-b .news-content:first-child{
+	display: block;
+}
+.nav-b .news-content li .left{
+	text-align: center;
+	width: 50px;
+}
+.nav-b .news-content li .right{
+	width: 265px;
+}
+.nav-b .news-content li img{
+	width: 50px;
+	height: 50px;
+	display: block;
+	border-radius: 50%;
+}
+.nav-b .news-content li span{
+	font-size: 8px;
+}
+.nav-b .news-content li p{
+	font-size: 12px;
+	color: #444;
+	line-height: 20px;
+	height: 36px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.nav-b .news-content li h1{
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	font-size: 14px;
+	margin-bottom: 8px;
+}
+/*.nav-c部分*/
+.nav-c{}
+.nav-c>p{
+	line-height: 40px;
+	text-align: center;
+	font-size: 16px;
+}
+.nav-c>div{
+	position: relative;
+	height: 130px;
+	width: 200px;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+.nav-c>div:last-child{
+	margin-bottom: 0px;
+}
+.nav-c div div{
+	transition: all 0.2s;
+	position: absolute;
+	top: 100px;
+	width: 190px;
+	height: 100px;
+	background-color: #333;
+	color: #FFFFFF;
+	opacity: 0.8;
+	padding-left: 10px;
+}
+.nav-c div div h1{
+	font-size: 12px;
+	line-height: 30px;
+}
+.nav-c div div p{
+	margin-top: 4px;
+	font-size: 10px;
+}
+/*设置简单的关于.nav-c的特效*/
+.nav-c>div:hover div{
+	top: 60px;
+}
+
+
+
+.aaa{
+	height: 800px;
+	width: 1200px;
 }
