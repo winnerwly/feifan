@@ -3,12 +3,98 @@
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/index-style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
+		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+		<script>
+			$(document).ready(function(){
+				var images=$(".carousel ul li");
+				var img_l=images.length;
+				for (var i=0;i<img_l;i++) {
+					$(".carousel div").append("<span class='pic-a'></span>")
+				}
+				$(".carousel div").css("margin-left","-"+$(".carousel div").width()/2+"px");
+				$(".carousel div").children().eq(0).addClass("active");
+				index=0;
+				var time=setInterval(function(){
+					images.eq(index).fadeOut(200);
+					index=(index+1)%img_l;
+					$(".carousel div").children().removeClass("active").eq(index).addClass("active");
+					images.eq(index).fadeIn(200)
+				},3000);
+			})
+		</script>
 	</head>
 	<body>
-		<h1>你是不是22傻！！！</h1>
-		<script type="text/javascript">
-			var h1=document.querySelector("h1");
-			alert(h1.innerText)
-		</script>
+		<div class="top">
+			<div class="w">
+				<ul class="left">
+					<li><a href="#">首页</a></li>
+					<li>
+						<a href="#">学院介绍</a>
+						<ul class="sub-nav left">
+							<li><a href="#">学院简介</a></li>
+							<li><a href="#">文化风采</a></li>
+							<li><a href="#">办学特色</a></li>
+							<li><a href="#">办学特色</a></li>
+							<li><a href="#">发展历程</a></li>
+							<li><a href="#">新闻媒体</a></li>
+							<li><a href="#">校区分布</a></li>
+							<li><a href="#">加入我们</a></li>
+						</ul>
+					</li>
+					<li><a href="#">课程导航</a></li>
+					<li><a href="#">师资力量</a></li>
+					<li><a href="#">学员作品</a></li>
+					<li><a href="#">考证学历</a></li>
+					<li><a href="#">就业信息</a></li>
+					<li><a href="#">学习资讯</a></li>
+					<li><a href="#">入学须知</a></li>
+				</ul>
+				<ul class="right">
+					<li><a href="#"><img src="img/wx.png"/></a></li>
+					<ul>
+						<li><img src="img/wx2.jpg"/></li>
+					</ul>
+				</ul>
+			</div>
+		</div>
+		<div class="header w clear">
+			 <div class="logo left">
+			 	<img src="img/logo.png"/>
+			 </div>
+			 <p class="left">教育培训领先品牌</p>
+			 <ul class="right">
+			 	<li class="left"><span class="fa fa-trophy"></span>源自名校</li>
+				<li class="left"><span class="fa fa-thumbs-up"></span>学院资质</li>
+				<li class="left"><span class="fa fa-television"></span>专注12年</li>
+				<li class="phone-400 left"><span class="fa fa-phone-square"></span>400-616-2336</li>
+			</ul>
+		</div>	
+		<div class="carousel w">
+			<ul class="carousel-img">
+				<li><a href=""><img src="img/lb-1.jpg"/></a></li>
+				<li><a href=""><img src="img/lb-2.jpg"/></a></li>
+				<li><a href=""><img src="img/lb-3.jpg"/></a></li>
+				<li><a href=""><img src="img/lb-4.jpg"/></a></li>
+				<li><a href=""><img src="img/lb-5.jpg"/></a></li>
+				<li><a href=""><img src="img/lb-6.jpg"/></a></li>
+				<li><a href=""><img src="img/lb-7.jpg"/></a></li>
+			</ul>
+			<div class="pic">
+			</div>
+		</div>	
+		<div class="nav w">
+			<div class="nav-a">
+				
+			</div>
+			<div class="nav-b">
+				
+			</div>
+			<div class="nav-c">
+				
+			</div>
+		</div>
+
 	</body>
 </html>

@@ -1,0 +1,190 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+a{
+	color: #333;
+	text-decoration: none;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.clear:after{
+	display: block;
+	content: "";
+	clear: both;
+}
+.w{
+	width: 1200px;
+	margin: 0 auto;
+}
+li{
+	list-style: none;
+}
+/*以上是一些通用的简单设置*/
+.top{
+	height: 38px;
+	background-color: #535353;
+	color: #fff;
+}
+.top a{
+	color: #FFFFFF;
+	font-family: "微软雅黑";
+	font-size: 12px;
+	line-height: 38px;
+}
+
+.top .w .left li{
+	text-align: center;
+	width: 56px;
+	padding: 0 10px;
+	float: left;
+	position: relative;
+}
+.top .w .left li:hover{
+	background-color: #FFFFFF;
+}
+.top .w .left li:hover>a{
+	color: #333;
+}
+.top .w .left li:hover .sub-nav{
+	display: block;
+}
+.top .w .left li .sub-nav{
+	display: none;
+	position: absolute;
+	top: 38px;
+	left: 0px;
+	background-color: #ccc;
+}
+.top .w .left li .sub-nav li{
+	float:none ;
+}
+.top .w .left li .sub-nav li:hover{
+	background-color: #FFFFFF;
+}
+.top .w .left li .sub-nav li:hover a{
+	color: red;
+}
+.top .w .right{
+	/*cursor:pointer;*/ 
+	position: relative;
+}
+.top .w .right>li{
+	
+	height: 38px;
+}
+.top .w .right:hover>ul{
+	display: block;
+}
+.top .w .right>li img{
+	padding: 9px;
+}
+.top .w .right ul{
+	position:absolute;
+	top: 38px;
+	right: 0px;
+	display: none;
+}
+/*第二部分*/
+.header{
+	line-height: 114px;
+}
+.header .logo{
+	height: 114px;
+	overflow: hidden;
+}
+.header .logo img{
+	height: 114px;
+}
+.header p{
+	font-size: 16px;
+	margin-left: 30px;
+}
+.header ul li{
+	font-size: 18px;
+	margin-left: 40px;
+}
+.header ul li span{
+	color: #f2c56a;
+	font-size: 24px;
+}
+.header ul .phone-400 span{
+	color: red;
+}
+/*轮播图*/
+.carousel{
+	height: 350px;
+	position: relative;
+}
+.carousel>ul{
+	width: inherit;
+	height: inherit;
+}
+.carousel>ul li:first-child{
+	display: block;
+}
+.carousel>ul li{
+	display: none;
+	position: absolute;
+	width: inherit;
+	height: inherit;
+	}
+.carousel>ul li a img{
+	width: inherit;
+	height: inherit;
+	}
+.carousel .pic{
+	top: 0px;
+	position: absolute;
+	top: 330px;
+	left: 50%;
+	
+}
+
+.carousel .pic .pic-a{
+	float: left;
+	width: 12px;
+	height: 12px;
+	margin: 0 6px;
+	border: 1px solid #FFFFFF;
+	border-radius: 50%;
+}
+.carousel .pic .active{
+	border-color: red;
+	background-color: red
+}
+/*导航*/
+.nav{
+	margin-top: 30px;
+	background-color: #CCCCCC;
+	height: 450px;
+	position: relative;
+}
+/**/
+.nav .nav-a{
+	width: 220px;
+	background-color: red;
+	height: inherit;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.nav .nav-b{
+	/*padding: 0px 228px 0px 240px;*/
+	padding-left: 240px;
+	padding-right: 228px;
+	height: inherit;
+	background-color: green;
+}
+.nav .nav-c{
+	width: 200px;
+	height: inherit;
+	background-color: yellow;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
