@@ -1,8 +1,8 @@
 *{
 	transition: all 0.3s;
-	
 	margin: 0px;
 	padding: 0px;
+	font-family: "微软雅黑";
 }
 a{
 	color: #333;
@@ -205,7 +205,7 @@ li{
 	padding-left: 22px;
 }
 
-.nav .nav-a>ul li:hover{
+.nav .nav-a>ul .hover{
 	color: #DD2727;
 	background-color: #EEEEEE;
 }
@@ -383,6 +383,142 @@ li{
 /*设置简单的关于.nav-c的特效*/
 .nav-c>div:hover div{
 	top: 60px;
+}
+
+/*最新开办部分*/
+.kaiban{
+	margin-top:30px ;
+	/*background-color: #EEEEEE;*/
+}
+/*kaiban-nav*/
+.kaiban .kaiban-nav{
+	height: 50px;
+	width: 100%;
+	border-bottom: 1px #ccc solid;
+}
+.kaiban .kaiban-nav li{
+	float: left;
+}
+.kaiban .kaiban-nav li.active{
+	color:#dd2727!important;
+	transition: none;
+	border-bottom: 2px #dd2727 solid;
+}
+.kaiban .kaiban-nav li:first-child{
+	font-size: 22px;
+	line-height: 50px;
+	margin-right: 170px;
+}
+.kaiban .kaiban-nav li:not(:first-child){
+	padding:0px 16px 14px;
+	font-size: 14px;
+	color: #4f4f4f;
+	margin-top: 17px;
+}
+/*kaiban-img*/
+.kaiban .kaiban-box{
+	position: relative;
+	height: 260px;
+	margin-top: 28px;
+	/*overflow: hidden;*/
+}
+.kaiban .kaiban-img{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: none;
+	width: 100%;
+}
+.kaiban .kaiban-img:first-child{
+	display: block;
+}
+.kaiban .kaiban-img li{
+	width: 288px;
+	height: 260px;
+	margin-left: 16px;
+	box-sizing: border-box;
+	border: 1px solid rgba(0,0,0,0);
+	/*background-color: blueviolet;*/
+	float: left;
+	padding: 8px;
+	transition: none;
+}
+.kaiban .kaiban-img li:hover{
+	border-color: #CCCCCC;
+}
+.kaiban .kaiban-img li:first-child{
+	margin-left: 0;
+}
+.kaiban .kaiban-img li div img{
+	width: 270px;
+	height: 180px;
+}
+.kaiban .kaiban-img li{}
+.kaiban .kaiban-img li h2{
+	font-size: 12px;
+	margin-bottom: 20px;
+}
+.kaiban .kaiban-img li p{
+	font-size: 10px;
+	color: #999999;
+}
+.kaiban .kaiban-img li p a{
+	color: #999999;
+}
+/*表格*/
+.kaiban .kaiban-table table{
+	width: 570px;
+	font-size: 14px;
+	float: left;
+}
+.kaiban .kaiban-table table:first-child{
+	margin-right: 60px;
+}
+.kaiban .kaiban-table{
+	margin-top: 10px;
+}
+.kaiban .kaiban-table table a{
+	color:#51B8F1 ;
+}
+
+.kaiban .kaiban-table table tr td .liner{
+	border-bottom: 1px #ccc solid;
+}
+.kaiban .kaiban-table table tr:nth-child(2) td{
+	height: 1px;
+}
+.kaiban .kaiban-table table tr td{
+	text-align: center;
+	height: 32px;
+	line-height: 32px;
+}
+.kaiban .kaiban-table table tr td:first-child{
+	text-align: left;
+}
+/*今日报名*/
+.kaiban .kaiban-lunbo{
+	position: relative;
+}
+.kaiban .kaiban-lunbo .baoming{
+	position: absolute;
+	z-index: 222;
+	width: 100px;
+	background-color: #FFFFFF;
+	border-bottom: 2px solid red;
+}
+.kaiban .kaiban-lunbo .baoming span{
+	color: red;
+}
+.kaiban .kaiban-lunbo ul{
+	width: 60000px;
+	position: absolute;
+	z-index: 11;
+	top: 0px;
+	left: 0px;
+}
+.kaiban .kaiban-lunbo ul li{
+	float:left;
+	margin-right: 20px;
 }
 
 

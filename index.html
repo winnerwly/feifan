@@ -28,6 +28,8 @@
 				var subNav=$(".a-sub-nav>ul>li");
 				//点击nav实现subNav的显示与隐藏
 				nav.hover(function(){
+					nav.removeClass("hover");
+					$(this).addClass("hover");
 					var inda=$(this).index();
 					if (inda>0) {
 						subNav.hide();
@@ -36,12 +38,16 @@
 						return
 					}
 				},function(){
+					nav.removeClass("hover");
 					subNav.hide()
 				})
 				//鼠标离开自身,自身才消失
 				subNav.hover(function(){
+					var inda=$(this).index();
+					nav.eq(inda+1).addClass("hover");
 					$(this).show()
 				},function(){
+					nav.removeClass("hover");
 					subNav.hide()
 					
 				});
@@ -55,6 +61,18 @@
 					$(this).addClass("active");
 					newsContent.hide();
 					newsContent.eq(ind).show();
+				});
+				
+				//设置最新开班的切换效果
+				var tabKaiban=$(".kaiban-nav li");
+				var kaibanImg=$(".kaiban .kaiban-box .kaiban-img");
+				
+				tabKaiban.hover(function(){
+					var index=$(this).index();
+					if (index>0) {
+						tabKaiban.removeClass("active").eq(index).addClass("active");
+						kaibanImg.hide().eq(index-1).show();
+					}
 				});
 			})
 		</script>
@@ -448,7 +466,6 @@
 							<p>为更好的促进我我院企业文化的发展与传承，增强员工的归属感和团队意识，让员工在紧张的...</p>
 						</div>
 					</li>
-					
 				</ul>
 				<ul class="news-content clear three">
 					<li>
@@ -560,8 +577,233 @@
 				</div>
 			</div>
 		</div>
+		<div class="kaiban w">
+			<ul class="kaiban-nav clear">
+				<li>最新开班</li>
+				<li class="active">平面UI</li>
+				<li>网页设计</li>
+				<li>室内景观</li>
+				<li>淘宝美工</li>
+				<li>电商网销	</li>
+				<li>机械模具</li>
+				<li>服装设计</li>
+				<li>影视美术</li>
+				<li>网络工程</li>
+			</ul>
+			<div class="kaiban-box">
+				<ul class="kaiban-img clear">
+					<li>
+						<div class="img">
+							<a href="#"><img src="img/kaiban-1.jpg"/></a>
+						</div>
+						<h2>平面设计软件全科班(白天班)</h2>
+						<p class="left">优惠价：3880元</p>
+						<p class="right"><a href="#">查看</a>&nbsp;<span class="fa fa-angle-right"></span></p>
+						
+					</li>
+					<li>
+						<div class="img">
+							<a href="#"><img src="img/kaiban-2.jpg"/></a>
+						</div>
+						<h2>平面设计软件全科班(白天班)</h2>
+						<p class="left">优惠价：3880元</p>
+						<p class="right"><a href="#">查看</a>&nbsp;<span class="fa fa-angle-right"></span></p>
+						
+					</li>
+					<li>
+						<div class="img">
+							<a href="#"><img src="img/kaiban-3.jpg"/></a>
+						</div>
+						<h2>平面设计软件全科班(白天班)</h2>
+						<p class="left">优惠价：3880元</p>
+						<p class="right"><a href="#">查看</a>&nbsp;<span class="fa fa-angle-right"></span></p>
+						
+					</li>
+					<li>
+						<div class="img">
+							<a href="#"><img src="img/kaiban-4.jpg"/></a>
+						</div>
+						<h2>平面设计软件全科班(白天班)</h2>
+						<p class="left">优惠价：3880元</p>
+						<p class="right"><a href="#">查看</a>&nbsp;<span class="fa fa-angle-right"></span></p>
+						
+					</li>
+				</ul>
+				<ul class="kaiban-img clear" style="background-color: red;">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<ul class="kaiban-img clear" style="background-color: green;">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<ul class="kaiban-img clear" style="background-color: gold;">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<ul class="kaiban-img clear" style="background-color: aqua;">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<ul class="kaiban-img clear" style="background-color: seagreen;">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<ul class="kaiban-img clear" style="background-color: firebrick;">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<ul class="kaiban-img clear" style="background-color: royalblue;">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<ul class="kaiban-img clear" style="background-color: tomato;">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<div class="kaiban-table clear">
+				<table border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td>班级名称</td>
+						<td>开课时间</td>
+						<td>学校价</td>
+						<td>优惠价</td>
+						<td>剩余名额</td>
+					</tr>
+					<tr>
+						<td colspan="5"><div class="liner"></div></td>
+					</tr>
+					<tr>
+						<td><a href="#">[虹口中心]</a>Web网页前端精品班(</td>
+						<td>2017-06-27</td>
+						<td><del>￥18800</del></td>
+						<td class="red">￥17800</td>
+						<td><a href="#">12</a></td>
+					</tr>
+					<tr>
+						<td><a href="#">[虹口中心]</a>Web网页前端精品班(</td>
+						<td>2017-06-27</td>
+						<td><del>￥18800</del></td>
+						<td class="red">￥17800</td>
+						<td><a href="#">12</a></td>
+					</tr>
+					<tr>
+						<td><a href="#">[虹口中心]</a>Web网页前端精品班(</td>
+						<td>2017-06-27</td>
+						<td><del>￥18800</del></td>
+						<td class="red">￥17800</td>
+						<td><a href="#">12</a></td>
+					</tr>
+					<tr>
+						<td><a href="#">[虹口中心]</a>Web网页前端精品班(</td>
+						<td>2017-06-27</td>
+						<td><del>￥18800</del></td>
+						<td class="red">￥17800</td>
+						<td><a href="#">12</a></td>
+					</tr>
+					<tr>
+						<td><a href="#">[虹口中心]</a>Web网页前端精品班(</td>
+						<td>2017-06-27</td>
+						<td><del>￥18800</del></td>
+						<td class="red">￥17800</td>
+						<td><a href="#">12</a></td>
+					</tr>
+				</table>
+				<table border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td>班级名称</td>
+						<td>开课时间</td>
+						<td>学校价</td>
+						<td>优惠价</td>
+						<td>剩余名额</td>
+					</tr>
+					<tr>
+						<td colspan="5"><div class="liner"></div></td>
+					</tr>
+					<tr>
+						<td><a href="#">[虹口中心]</a>Web网页前端精品班(</td>
+						<td>2017-06-27</td>
+						<td><del>￥18800</del></td>
+						<td class="red">￥17800</td>
+						<td><a href="#">12</a></td>
+					</tr>
+					<tr>
+						<td><a href="#">[虹口中心]</a>Web网页前端精品班(</td>
+						<td>2017-06-27</td>
+						<td><del>￥18800</del></td>
+						<td class="red">￥17800</td>
+						<td><a href="#">12</a></td>
+					</tr>
+					<tr>
+						<td><a href="#">[虹口中心]</a>Web网页前端精品班(</td>
+						<td>2017-06-27</td>
+						<td><del>￥18800</del></td>
+						<td class="red">￥17800</td>
+						<td><a href="#">12</a></td>
+					</tr>
+					<tr>
+						<td><a href="#">[虹口中心]</a>Web网页前端精品班(</td>
+						<td>2017-06-27</td>
+						<td><del>￥18800</del></td>
+						<td class="red">￥17800</td>
+						<td><a href="#">12</a></td>
+					</tr>
+					<tr>
+						<td><a href="#">[虹口中心]</a>Web网页前端精品班(</td>
+						<td>2017-06-27</td>
+						<td><del>￥18800</del></td>
+						<td class="red">￥17800</td>
+						<td><a href="#">12</a></td>
+					</tr>
+				</table>
+			</div>
+			<div class="kaiban-lunbo">
+				<div class="baoming">
+					<span class="fa fa-user-plus"></span>&nbsp;今日报名:
+				</div>
+				<ul>
+					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
+					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
+					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
+					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
+					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
+					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
+					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
+					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
+					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
+					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
+					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
+					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
+					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
+					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
+					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
+					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
+					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
+					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
+					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
+					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
+				</ul>
+			</div>
+		
+		</div>
 		<div class="aaa" style="height: 300px;width: 300px;">
-			
 		</div>
 	</body>
 </html>
