@@ -64,7 +64,9 @@ li {
 .top .w .left li:hover>a {
 	color: #333;
 }
-
+.top .w .left li:hover>a span:before{
+	content: "\f106";
+}
 .top .w .left li:hover .sub-nav {
 	display: block;
 }
@@ -84,13 +86,14 @@ li {
 
 .top .w .left li .sub-nav li {
 	float: none;
+	width: auto;
+	white-space: nowrap;
 }
 
 .top .w .left li .sub-nav li:hover {
-	background-color: #FFFFFF;
+	background-color: #F3F3F3;
 	z-index: 9999;
 }
-
 .top .w .left li .sub-nav li:hover a {
 	color: red;
 }
