@@ -1,0 +1,155 @@
+* {
+	/*transition: all 0.3s;*/
+	margin: 0px;
+	padding: 0px;
+	font-family: "微软雅黑";
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.clear:after {
+	display: block;
+	content: "";
+	clear: both;
+}
+
+.w {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+li {
+	list-style: none;
+}
+
+
+/*以上是一些通用的简单设置*/
+
+.top {
+	height: 38px;
+	background-color: #535353;
+	color: #fff;
+}
+
+.top a {
+	color: #FFFFFF;
+	font-family: "微软雅黑";
+	font-size: 12px;
+	line-height: 38px;
+}
+
+.top .w .left li {
+	text-align: center;
+	width: 56px;
+	padding: 0 16px;
+	float: left;
+	position: relative;
+}
+
+.top .w .left li:hover {
+	background-color: #FFFFFF;
+}
+
+.top .w .left li:hover>a {
+	color: #333;
+}
+
+.top .w .left li:hover .sub-nav {
+	display: block;
+}
+
+.top .w .left li .sub-nav a {
+	color: #333333;
+}
+
+.top .w .left li .sub-nav {
+	z-index: 999;
+	display: none;
+	position: absolute;
+	top: 38px;
+	left: 0px;
+	background-color: #FFFFFF;
+}
+
+.top .w .left li .sub-nav li {
+	float: none;
+}
+
+.top .w .left li .sub-nav li:hover {
+	background-color: #FFFFFF;
+	z-index: 9999;
+}
+
+.top .w .left li .sub-nav li:hover a {
+	color: red;
+}
+
+.top .w .right {
+	/*cursor:pointer;*/
+	position: relative;
+}
+
+.top .w .right>li {
+	height: 38px;
+}
+
+.top .w .right:hover>ul {
+	display: block;
+}
+
+.top .w .right>li img {
+	padding: 9px;
+}
+
+.top .w .right ul {
+	position: absolute;
+	top: 38px;
+	right: 0px;
+	display: none;
+}
+
+
+/*第二部分*/
+
+.header {
+	line-height: 114px;
+}
+
+.header .logo {
+	height: 114px;
+	overflow: hidden;
+}
+
+.header .logo img {
+	height: 114px;
+}
+
+.header p {
+	font-size: 16px;
+	margin-left: 30px;
+}
+
+.header ul li {
+	font-size: 18px;
+	margin-left: 40px;
+}
+
+.header ul li span {
+	color: #f2c56a;
+	font-size: 24px;
+}
+
+.header ul .phone-400 span {
+	color: red;
+}

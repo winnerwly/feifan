@@ -1,158 +1,39 @@
-*{
-	transition: all 0.3s;
-	margin: 0px;
-	padding: 0px;
-	font-family: "微软雅黑";
-}
-a{
-	color: #333;
-	text-decoration: none;
-}
-.left{
-	float: left;
-}
-.right{
-	float: right;
-}
-.clear:after{
-	display: block;
-	content: "";
-	clear: both;
-}
-.w{
-	width: 1200px;
-	margin: 0 auto;
-}
-li{
-	list-style: none;
-}
-/*以上是一些通用的简单设置*/
-.top{
-	height: 38px;
-	background-color: #535353;
-	color: #fff;
-}
-.top a{
-	color: #FFFFFF;
-	font-family: "微软雅黑";
-	font-size: 12px;
-	line-height: 38px;
-}
-
-.top .w .left li{
-	text-align: center;
-	width: 56px;
-	padding: 0 16px;
-	float: left;
-	position: relative;
-}
-.top .w .left li:hover{
-	background-color: #FFFFFF;
-}
-.top .w .left li:hover>a{
-	color: #333;
-}
-.top .w .left li:hover .sub-nav{
-	display: block;
-}
-.top .w .left li .sub-nav a{
-	color: #333333;
-}
-.top .w .left li .sub-nav{
-	z-index: 999;
-	display: none;
-	position: absolute;
-	top: 38px;
-	left: 0px;
-	background-color: #FFFFFF;
-}
-.top .w .left li .sub-nav li{
-	float:none ;
-}
-.top .w .left li .sub-nav li:hover{
-	background-color: #FFFFFF;
-	z-index: 9999;
-}
-.top .w .left li .sub-nav li:hover a{
-	color: red;
-}
-.top .w .right{
-	/*cursor:pointer;*/ 
-	position: relative;
-}
-.top .w .right>li{
-	
-	height: 38px;
-}
-.top .w .right:hover>ul{
-	display: block;
-}
-.top .w .right>li img{
-	padding: 9px;
-}
-.top .w .right ul{
-	position:absolute;
-	top: 38px;
-	right: 0px;
-	display: none;
-}
-/*第二部分*/
-.header{
-	line-height: 114px;
-}
-.header .logo{
-	height: 114px;
-	overflow: hidden;
-}
-.header .logo img{
-	height: 114px;
-}
-.header p{
-	font-size: 16px;
-	margin-left: 30px;
-}
-.header ul li{
-	font-size: 18px;
-	margin-left: 40px;
-}
-.header ul li span{
-	color: #f2c56a;
-	font-size: 24px;
-}
-.header ul .phone-400 span{
-	color: red;
-}
 /*轮播图*/
-.carousel{
+
+.carousel {
 	height: 350px;
 	position: relative;
 }
-.carousel>ul{
+
+.carousel>ul {
 	width: inherit;
 	height: inherit;
 }
-.carousel>ul li:first-child{
+
+.carousel>ul li:first-child {
 	display: block;
 }
-.carousel>ul li{
+
+.carousel>ul li {
 	display: none;
 	position: absolute;
 	width: inherit;
 	height: inherit;
-	}
-.carousel>ul li a img{
+}
+
+.carousel>ul li a img {
 	width: inherit;
 	height: inherit;
-	}
-.carousel .pic{
+}
+
+.carousel .pic {
 	top: 0px;
 	position: absolute;
 	top: 330px;
 	left: 50%;
-	
 }
 
-.carousel .pic .pic-a{
+.carousel .pic .pic-a {
 	float: left;
 	width: 12px;
 	height: 12px;
@@ -160,19 +41,26 @@ li{
 	border: 1px solid #FFFFFF;
 	border-radius: 50%;
 }
-.carousel .pic .active{
+
+.carousel .pic .active {
 	border-color: red;
 	background-color: red
 }
+
+
 /*导航*/
-.nav{
+
+.nav {
 	margin-top: 30px;
 	/*background-color: #CCCCCC;*/
 	height: 450px;
 	position: relative;
 }
+
+
 /**/
-.nav .nav-a{
+
+.nav .nav-a {
 	width: 220px;
 	/*background-color: red;*/
 	height: inherit;
@@ -180,22 +68,28 @@ li{
 	top: 0;
 	left: 0;
 }
-.nav .nav-b{
-	
+
+.nav .nav-b {
 	padding-left: 240px;
 	padding-right: 228px;
 }
-.nav .nav-c{
+
+.nav .nav-c {
 	width: 200px;
 	height: inherit;
 	position: absolute;
 	top: 0;
 	right: 0;
 }
+
+
 /*nav-a的属性设置*/
-.nav .nav-a{}
-.nav .nav-a>ul{}
-.nav .nav-a>ul li{
+
+.nav .nav-a {}
+
+.nav .nav-a>ul {}
+
+.nav .nav-a>ul li {
 	font-size: 16px;
 	height: 40px;
 	line-height: 40px;
@@ -205,38 +99,47 @@ li{
 	padding-left: 22px;
 }
 
-.nav .nav-a>ul .hover{
+.nav .nav-a>ul .hover {
 	color: #DD2727;
 	background-color: #EEEEEE;
 }
-.nav .nav-a>ul li a:hover{
+
+.nav .nav-a>ul li a:hover {
 	color: #DD2727;
 }
-.nav .nav-a>ul li a{
+
+.nav .nav-a>ul li a {
 	color: #535353;
 	font-size: 12px;
 	display: inline-block;
 	margin-left: 26px;
 }
-.nav .nav-a>ul li:first-child span{
+
+.nav .nav-a>ul li:first-child span {
 	display: inline-block;
 	margin-right: 20px;
 }
-.nav .nav-a>ul li:first-child{
+
+.nav .nav-a>ul li:first-child {
 	color: #FFFFFF;
 	box-sizing: border-box;
 	background-color: #DD2727;
 }
-.nav .nav-a>ul li:first-child:hover{
+
+.nav .nav-a>ul li:first-child:hover {
 	color: #FFFFFF;
 }
-.nav .nav-a>li:first-child{
+
+.nav .nav-a>li:first-child {
 	background-color: #DD2727;
-	border-left:none;
-	border-right:none;
+	border-left: none;
+	border-right: none;
 }
+
+
 /*设置左侧导航栏弹出页*/
-.a-sub-nav{
+
+.a-sub-nav {
 	height: 411px;
 	width: 641px;
 	box-sizing: border-box;
@@ -245,10 +148,12 @@ li{
 	top: 39px;
 	left: 220px;
 }
-.a-sub-nav ul{
+
+.a-sub-nav ul {
 	height: inherit;
 }
-.a-sub-nav>ul>li{
+
+.a-sub-nav>ul>li {
 	z-index: 99;
 	display: none;
 	height: 411px;
@@ -256,80 +161,98 @@ li{
 	border: 1px #ccc solid;
 	border-left: none;
 	box-sizing: border-box;
-	padding:20px ;
+	padding: 20px;
 	position: absolute;
 	background-color: #FFFFFF;
 }
-.a-sub-nav ul li ul{
+
+.a-sub-nav ul li ul {
 	width: 290px;
 	height: 100px;
 }
-.a-sub-nav ul li ul li{
+
+.a-sub-nav ul li ul li {
 	height: 60px;
 	border-top: 1px #ccc solid;
 	font-size: 14px;
 }
-.a-sub-nav ul li ul li a{
-	padding-left:20px ;
+
+.a-sub-nav ul li ul li a {
+	padding-left: 20px;
 	line-height: 20px;
 }
+
+
 /*nav-b部分*/
-.nav-b{
+
+.nav-b {
 	position: relative;
 }
-.nav-b .news-nav{
+
+.nav-b .news-nav {
 	cursor: pointer;
 	height: 39px;
 	border-bottom: 1px solid #ccc;
 }
-.nav-b .news-nav li{
+
+.nav-b .news-nav li {
 	transition: 0s;
 	font-size: 16px;
 	line-height: 39px;
 	float: left;
 	padding: 0px 22px;
 }
-.nav-b .news-nav .active{
+
+.nav-b .news-nav .active {
 	color: #dd2727;
 	border-bottom: 2px solid #dd2727;
 }
-.nav-b .news-content{
+
+.nav-b .news-content {
 	cursor: pointer;
 	padding: 0;
 	position: absolute;
 	top: 41px;
 	left: 240px;
 }
-.nav-b .news-content li{
+
+.nav-b .news-content li {
 	float: left;
 	width: 366px;
 	height: 102px;
-	box-sizing:border-box;
+	box-sizing: border-box;
 	padding: 18px 20px 0px 6px;
 }
-.nav-b .news-content{
+
+.nav-b .news-content {
 	display: none;
 }
-.nav-b .news-content:first-child{
+
+.nav-b .news-content:first-child {
 	display: block;
 }
-.nav-b .news-content li .left{
+
+.nav-b .news-content li .left {
 	text-align: center;
 	width: 50px;
 }
-.nav-b .news-content li .right{
+
+.nav-b .news-content li .right {
 	width: 265px;
 }
-.nav-b .news-content li img{
+
+.nav-b .news-content li img {
 	width: 50px;
 	height: 50px;
 	display: block;
 	border-radius: 50%;
 }
-.nav-b .news-content li span{
+
+.nav-b .news-content li span {
 	font-size: 8px;
 }
-.nav-b .news-content li p{
+
+.nav-b .news-content li p {
 	font-size: 12px;
 	color: #444;
 	line-height: 20px;
@@ -337,31 +260,39 @@ li{
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
-.nav-b .news-content li h1{
+
+.nav-b .news-content li h1 {
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	overflow: hidden;
 	font-size: 14px;
 	margin-bottom: 8px;
 }
+
+
 /*.nav-c部分*/
-.nav-c{}
-.nav-c>p{
+
+.nav-c {}
+
+.nav-c>p {
 	line-height: 40px;
 	text-align: center;
 	font-size: 16px;
 }
-.nav-c>div{
+
+.nav-c>div {
 	position: relative;
 	height: 130px;
 	width: 200px;
 	margin-bottom: 10px;
 	overflow: hidden;
 }
-.nav-c>div:last-child{
+
+.nav-c>div:last-child {
 	margin-bottom: 0px;
 }
-.nav-c div div{
+
+.nav-c div div {
 	transition: all 0.2s;
 	position: absolute;
 	top: 100px;
@@ -372,158 +303,569 @@ li{
 	opacity: 0.8;
 	padding-left: 10px;
 }
-.nav-c div div h1{
+
+.nav-c div div h1 {
 	font-size: 12px;
 	line-height: 30px;
 }
-.nav-c div div p{
+
+.nav-c div div p {
 	margin-top: 4px;
 	font-size: 10px;
 }
+
+
 /*设置简单的关于.nav-c的特效*/
-.nav-c>div:hover div{
+
+.nav-c>div:hover div {
 	top: 60px;
 }
 
+
 /*最新开办部分*/
-.kaiban{
-	margin-top:30px ;
+
+.kaiban {
+	margin-top: 30px;
 	/*background-color: #EEEEEE;*/
 }
+
+
 /*kaiban-nav*/
-.kaiban .kaiban-nav{
+
+.kaiban .kaiban-nav {
 	height: 50px;
 	width: 100%;
 	border-bottom: 1px #ccc solid;
 }
-.kaiban .kaiban-nav li{
+
+.kaiban .kaiban-nav li {
 	float: left;
 }
-.kaiban .kaiban-nav li.active{
-	color:#dd2727!important;
+
+.kaiban .kaiban-nav li.active {
+	color: #dd2727!important;
 	transition: none;
 	border-bottom: 2px #dd2727 solid;
 }
-.kaiban .kaiban-nav li:first-child{
+
+.kaiban .kaiban-nav li:first-child {
 	font-size: 22px;
 	line-height: 50px;
 	margin-right: 170px;
 }
-.kaiban .kaiban-nav li:not(:first-child){
-	padding:0px 16px 14px;
+
+.kaiban .kaiban-nav li:not(:first-child) {
+	padding: 0px 16px 14px;
 	font-size: 14px;
 	color: #4f4f4f;
 	margin-top: 17px;
 }
+
+
 /*kaiban-img*/
-.kaiban .kaiban-box{
+
+.kaiban .kaiban-box {
 	position: relative;
 	height: 260px;
 	margin-top: 28px;
 	/*overflow: hidden;*/
 }
-.kaiban .kaiban-img{
+
+.kaiban .kaiban-img {
 	position: absolute;
 	top: 0px;
 	left: 0px;
 	display: none;
 	width: 100%;
 }
-.kaiban .kaiban-img:first-child{
+
+.kaiban .kaiban-img:first-child {
 	display: block;
 }
-.kaiban .kaiban-img li{
+
+.kaiban .kaiban-img li {
 	width: 288px;
 	height: 260px;
 	margin-left: 16px;
 	box-sizing: border-box;
-	border: 1px solid rgba(0,0,0,0);
+	border: 1px solid rgba(0, 0, 0, 0);
 	/*background-color: blueviolet;*/
 	float: left;
 	padding: 8px;
 	transition: none;
 }
-.kaiban .kaiban-img li:hover{
+
+.kaiban .kaiban-img li:hover {
 	border-color: #CCCCCC;
 }
-.kaiban .kaiban-img li:first-child{
+
+.kaiban .kaiban-img li:first-child {
 	margin-left: 0;
 }
-.kaiban .kaiban-img li div img{
+
+.kaiban .kaiban-img .img {
+	overflow: hidden;
+	width: 270px;
+	height: 180px;
+	position: relative;
+}
+
+.kaiban .kaiban-img li div img {
+	position: absolute;
 	width: 270px;
 	height: 180px;
 }
-.kaiban .kaiban-img li{}
-.kaiban .kaiban-img li h2{
+
+.kaiban .kaiban-img li {}
+
+.kaiban .kaiban-img li h2 {
 	font-size: 12px;
-	margin-bottom: 20px;
+	margin-top: 16px;
+	padding-left: 2px;
+	margin-bottom: 5px;
+	color: #505050;
 }
-.kaiban .kaiban-img li p{
+
+.kaiban .kaiban-img li p {
+	padding-left: 2px;
 	font-size: 10px;
 	color: #999999;
 }
-.kaiban .kaiban-img li p a{
+
+.kaiban .kaiban-img li p a {
 	color: #999999;
 }
+
+
 /*表格*/
-.kaiban .kaiban-table table{
+
+.kaiban .kaiban-table table {
 	width: 570px;
 	font-size: 14px;
 	float: left;
 }
-.kaiban .kaiban-table table:first-child{
+
+.kaiban .kaiban-table table:first-child {
 	margin-right: 60px;
 }
-.kaiban .kaiban-table{
+
+.kaiban .kaiban-table {
 	margin-top: 10px;
 }
-.kaiban .kaiban-table table a{
-	color:#51B8F1 ;
+
+.kaiban .kaiban-table table a {
+	color: #51B8F1;
 }
 
-.kaiban .kaiban-table table tr td .liner{
+.kaiban .kaiban-table table tr td .liner {
 	border-bottom: 1px #ccc solid;
 }
-.kaiban .kaiban-table table tr:nth-child(2) td{
+
+.kaiban .kaiban-table table tr:nth-child(2) td {
 	height: 1px;
 }
-.kaiban .kaiban-table table tr td{
+
+.kaiban .kaiban-table table tr td {
 	text-align: center;
 	height: 32px;
 	line-height: 32px;
 }
-.kaiban .kaiban-table table tr td:first-child{
+
+.kaiban .kaiban-table table tr td:first-child {
 	text-align: left;
 }
+
+
 /*今日报名*/
-.kaiban .kaiban-lunbo{
+
+.kaiban .kaiban-lunbo {
+	border-bottom: 1px #CCCCCC solid;
+	margin-top: 10px;
+	overflow: hidden;
+	height: 20px;
 	position: relative;
 }
-.kaiban .kaiban-lunbo .baoming{
+
+.kaiban .kaiban-lunbo div {
 	position: absolute;
-	z-index: 222;
+	z-index: 1;
 	width: 100px;
 	background-color: #FFFFFF;
 	border-bottom: 2px solid red;
 }
-.kaiban .kaiban-lunbo .baoming span{
+
+.kaiban .kaiban-lunbo .baoming span {
 	color: red;
 }
-.kaiban .kaiban-lunbo ul{
-	width: 60000px;
+
+.kaiban .kaiban-lunbo ul {
 	position: absolute;
-	z-index: 11;
 	top: 0px;
 	left: 0px;
 }
-.kaiban .kaiban-lunbo ul li{
-	float:left;
-	margin-right: 20px;
+
+.kaiban .kaiban-lunbo ul li {
+	float: left;
+	padding-right: 20px;
 }
 
 
+/*师资力量部分*/
 
-.aaa{
-	height: 800px;
-	width: 1200px;
+.teachers {
+	margin-top: 30px;
+}
+
+.teachers .teachersTop {}
+
+.teachers .teachersTop h2 {
+	font-size: 22px;
+	line-height: 50px;
+	font-weight: normal;
+}
+
+.teachers .teachersTop div {}
+
+.teachers .teachersTop div span {
+	display: inline-block;
+	cursor: pointer;
+	padding-left: 5px;
+}
+
+.teachers .teachersTop div .fa1 {
+	color: #DD2727;
+}
+
+
+/*图片滚动*/
+
+.teachers {
+	position: relative;
+	height: 300px;
+	overflow: hidden;
+}
+
+.teachers .teacher {
+	position: absolute;
+	top: 50px;
+	left: 0px;
+}
+
+.teachers .teacher li {
+	width: 270px;
+	height: 250px;
+	float: left;
+	padding-right: 40px;
+}
+
+.teachers .teacher li div {
+	height: 180px;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.teachers .teacher li div p {
+	transition: all 0.3;
+	height: 180px;
+	width: 100%;
+	background-color: rgba(51, 51, 51, 0.6);
+	position: absolute;
+	z-index: 33;
+	color: #FFFFFF;
+	padding: 20px 12px;
+	display: none;
+}
+
+.teachers .teacher li div:hover p {
+	display: block;
+}
+
+.teachers .teacher li div img {
+	width: 270px;
+}
+
+.teachers .teacher li p {
+	color: #505050;
+	font-size: 14px;
+	box-sizing: border-box;
+	font-size: 12px;
+	line-height: 2em;
+	padding: 20px 0 0 2px;
+}
+
+.teachers .teacher li span {
+	padding-left: 2px;
+	color: #9c9c9c;
+	font-size: 12px;
+}
+
+.teachers .teacher li span:last-child {
+	color: #fbb517;
+	padding-right: 8px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+
+/*就业明星部分*/
+
+.jiuyeMX {
+	height: 228px;
+	position: relative;
+}
+
+.jiuyeMX .left {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 72px;
+	height: 228px;
+	background-color: #f3f3f3;
+}
+
+.jiuyeMX .right {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 228px;
+	width: 72px;
+	background-color: #f3f3f3;
+}
+
+.jiuyeMX div span:hover {
+	background-color: #aaa;
+	opacity: 0.7;
+	color: #FFFFFF;
+}
+
+.jiuyeMX div span {
+	font-size: 32px;
+	color: #b1b1b1;
+	width: 40px;
+	height: 68px;
+	line-height: 68px;
+	text-align: center;
+	display: block;
+	margin-top: 80px;
+}
+
+.jiuyeMX div.left span {
+	margin-left: 14px;
+}
+
+.jiuyeMX div.right span {
+	margin-left: 18px;
+}
+
+.jiuyeMX .content {
+	width: 1056px;
+	height: 228px;
+	background-color: #f3f3f3;
+	margin-left: 72px;
+	margin-right: 72px;
+	position: relative;
+}
+
+.jiuyeMX .content ul {
+	height: 228px;
+	position: absolute;
+}
+
+.jiuyeMX .content ul li {
+	width: 310px;
+	float: left;
+	margin-right: 63px;
+	height: 228px;
+}
+
+.jiuyeMX .content ul li .img {
+	float: left;
+	width: 74px;
+	text-align: center;
+}
+
+.jiuyeMX .content ul li .img img {
+	margin-top: 65px;
+	width: 74px;
+	height: 74px;
+	border-radius: 50%;
+}
+
+.jiuyeMX .content ul li .text {
+	margin-top: 20px;
+	font-size: 12px;
+	line-height: 1.5em;
+	width: 220px;
+	float: right;
+	margin-right: 4px;
+}
+
+.jiuyeMX .content ul li .text p {
+	color: #666;
+}
+
+.jiuyeMX .content ul li .text p:first-child {
+	line-height: 52px;
+	color: #333;
+}
+
+.jiuyeMX .content ul li .text p:last-child {
+	margin-top: 20px;
+}
+
+
+/*非凡荣誉*/
+
+.honor {
+	margin-top: 30px;
+}
+
+.honor>p {
+	font-size: 22px;
+	color: #333;
+	line-height: 50px;
+}
+
+.honor ul {}
+
+.honor ul li {
+	float: left;
+	margin-bottom: 30px;
+}
+
+.honor ul li div {
+	padding: 0 15px;
+	height: 170px;
+	overflow: hidden;
+}
+
+.honor ul li div img {
+	width: 270px;
+}
+
+.honor ul li p {
+	width: 300px;
+	font-size: 14px;
+	color: #333;
+	text-align: center;
+}
+
+
+/*校区分布部分*/
+
+.school {
+	margin-top: 30px;
+}
+
+.school>p {
+	font-size: 22px;
+	color: #333;
+	line-height: 50px;
+}
+
+.school ul li {
+	width: 246px;
+	height: 44px;
+	margin: 27px;
+	float: left;
+}
+
+.school ul li span {
+	float: left;
+	height: 44px;
+}
+
+.school ul li span:first-child {
+	border-right: 1px #ccc solid;
+	padding-right: 10px;
+	line-height: 44px;
+	font-size: 18px;
+}
+
+.school ul li span:last-child {
+	padding-left: 20px;
+}
+
+.school ul li span p:first-child {
+	font-size: 14px;
+	line-height: 1.8em;
+	color: #515151;
+}
+
+.school ul li span p:last-child {
+	font-size: 12px;
+	color: #939393;
+}
+
+
+/*合作企业*/
+
+.cooperate {
+	margin-top: 30px;
+}
+
+.cooperate>p {
+	font-size: 22px;
+	line-height: 50px;
+	color: #333;
+}
+
+.cooperate .box {
+	margin-top: 10px;
+	position: relative;
+	overflow: hidden;
+}
+
+.cooperate .box .content {
+	position: relative;
+	width: 1140px;
+	margin: 0 30px;
+}
+
+.cooperate .box .content ul {
+	position: relative;
+}
+
+.cooperate .box .content ul li {
+	float: left;
+}
+
+.cooperate .box .content ul li .img {
+	width: 170px;
+	height: 80px;
+	margin-right: 20px;
+	overflow: hidden;
+	border: 1px #ccc solid;
+}
+
+.cooperate .box .content ul li .img img {
+	width: 170px;
+	height: 80px;
+}
+
+.cooperate .box .left {
+	position: absolute;
+	width: 30px;
+	top: 0px;
+	left: 0px;
+	z-index: 2;
+	font-size: 30px;
+	line-height: 82px;
+	text-align: center;
+	background-color: #FFFFFF;
+	cursor: pointer;
+}
+
+.cooperate .box .right {
+	position: absolute;
+	background-color: #FFFFFF;
+	width: 30px;
+	top: 0px;
+	right: 0px;
+	z-index: 2;
+	font-size: 30px;
+	line-height: 82px;
+	text-align: center;
+	cursor: pointer;
 }

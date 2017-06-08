@@ -2,80 +2,13 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title></title>
-		<link rel="stylesheet" type="text/css" href="css/index-style.css"/>
+		<title>仿非凡学院建站</title>
 		<link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
+		<link rel="stylesheet" type="text/css" href="css/header-style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index-style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/footer-style.css"/>
 		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
-		<script>
-			$(document).ready(function(){
-				//设置轮播图
-				var images=$(".carousel ul li");
-				var img_l=images.length;
-				for (var i=0;i<img_l;i++) {
-					$(".carousel div").append("<span class='pic-a'></span>")
-				}
-				$(".carousel div").css("margin-left","-"+$(".carousel div").width()/2+"px");
-				$(".carousel div").children().eq(0).addClass("active");
-				index=0;
-				var time=setInterval(function(){
-					images.eq(index).fadeOut(200);
-					index=(index+1)%img_l;
-					$(".carousel div").children().removeClass("active").eq(index).addClass("active");
-					images.eq(index).fadeIn(200)
-				},3000);
-				//设置课程导航的二级菜单
-				var nav=$(".nav-a>ul li");
-				var subNav=$(".a-sub-nav>ul>li");
-				//点击nav实现subNav的显示与隐藏
-				nav.hover(function(){
-					nav.removeClass("hover");
-					$(this).addClass("hover");
-					var inda=$(this).index();
-					if (inda>0) {
-						subNav.hide();
-						subNav.eq(inda-1).show()
-					} else{
-						return
-					}
-				},function(){
-					nav.removeClass("hover");
-					subNav.hide()
-				})
-				//鼠标离开自身,自身才消失
-				subNav.hover(function(){
-					var inda=$(this).index();
-					nav.eq(inda+1).addClass("hover");
-					$(this).show()
-				},function(){
-					nav.removeClass("hover");
-					subNav.hide()
-					
-				});
-				//设置新闻的子页的显示与隐藏
-				var newsNav=$(".news-nav li");
-				var newsContent=$(".news-content");
-				
-				newsNav.mousemove(function(){
-					var ind=$(this).index();
-					newsNav.removeClass("active");
-					$(this).addClass("active");
-					newsContent.hide();
-					newsContent.eq(ind).show();
-				});
-				
-				//设置最新开班的切换效果
-				var tabKaiban=$(".kaiban-nav li");
-				var kaibanImg=$(".kaiban .kaiban-box .kaiban-img");
-				
-				tabKaiban.hover(function(){
-					var index=$(this).index();
-					if (index>0) {
-						tabKaiban.removeClass("active").eq(index).addClass("active");
-						kaibanImg.hide().eq(index-1).show();
-					}
-				});
-			})
-		</script>
+		<script type="text/javascript" src="js/index-jquery.js" ></script>
 	</head>
 	<body>
 		<div class="top">
@@ -577,7 +510,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="kaiban w">
+		<div class="kaiban kaiban1 w">
 			<ul class="kaiban-nav clear">
 				<li>最新开班</li>
 				<li class="active">平面UI</li>
@@ -787,23 +720,628 @@
 					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
 					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
 					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
-					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
-					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
-					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
-					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
-					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
-					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
-					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
-					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
-					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
-					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
-					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
-					<li> 浦东校区 李** 电话：138****4632 网络工程 9时13分 报名成功</li>
 				</ul>
 			</div>
 		
 		</div>
-		<div class="aaa" style="height: 300px;width: 300px;">
+		<div class="teachers w clear">
+			<div class="teachersTop clear">
+				<h2 class="left">师资力量</h2>
+				<div class="right">
+					<span class="fa fa1 fa-caret-left"></span>
+					<span class="fa fa1 fa-caret-right"></span>
+					<span><a href="#">看全部</a></span>
+					<span class="fa fa-arrow-circle-o-right"></span>
+				</div>
+			</div>
+			<ul class="teacher">
+				<li>
+					<div>
+						<p>12年网页设计经验，曾为东海救助局，联合利华，纽伦堡会展等多家企业提供网站运营建设；其独特的视觉模式理念为近百家淘宝店铺传授了视觉营销技巧，策划实现了一个又一个淘宝美工实战集训</p>
+						<img src="img/teacher-1.jpg"/>
+					</div>
+					<p>夏老师</p>
+					<span>淘宝美工设计讲师</span>
+					<span class="right fa fa-thumbs-o-up"></span>
+				</li>
+				<li>
+					<div>
+						<p>12年网页设计经验，曾为东海救助局，联合利华，纽伦堡会展等多家企业提供网站运营建设；其独特的视觉模式理念为近百家淘宝店铺传授了视觉营销技巧，策划实现了一个又一个淘宝美工实战集训</p>
+						<img src="img/teacher-2.jpg"/>
+					</div>
+					<p>夏老师</p>
+					<span>淘宝美工设计讲师</span>
+					<span class="right fa fa-thumbs-o-up"></span>
+				</li>
+				<li>
+					<div>
+						<p>12年网页设计经验，曾为东海救助局，联合利华，纽伦堡会展等多家企业提供网站运营建设；其独特的视觉模式理念为近百家淘宝店铺传授了视觉营销技巧，策划实现了一个又一个淘宝美工实战集训</p>
+						<img src="img/teacher-1.jpg"/>
+					</div>
+					<p>夏老师</p>
+					<span>淘宝美工设计讲师</span>
+					<span class="right fa fa-thumbs-o-up"></span>
+				</li>
+				<li>
+					<div>
+						<p>12年网页设计经验，曾为东海救助局，联合利华，纽伦堡会展等多家企业提供网站运营建设；其独特的视觉模式理念为近百家淘宝店铺传授了视觉营销技巧，策划实现了一个又一个淘宝美工实战集训</p>
+						<img src="img/teacher-2.jpg"/>
+					</div>
+					<p>夏老师</p>
+					<span>淘宝美工设计讲师</span>
+					<span class="right fa fa-thumbs-o-up"></span>
+				</li>
+				<li>
+					<div>
+						<p>12年网页设计经验，曾为东海救助局，联合利华，纽伦堡会展等多家企业提供网站运营建设；其独特的视觉模式理念为近百家淘宝店铺传授了视觉营销技巧，策划实现了一个又一个淘宝美工实战集训</p>
+						<img src="img/teacher-3.jpg"/>
+					</div>
+					<p>夏老师</p>
+					<span>淘宝美工设计讲师</span>
+					<span class="right fa fa-thumbs-o-up"></span>
+				</li>
+				<li>
+					<div>
+						<p>12年网页设计经验，曾为东海救助局，联合利华，纽伦堡会展等多家企业提供网站运营建设；其独特的视觉模式理念为近百家淘宝店铺传授了视觉营销技巧，策划实现了一个又一个淘宝美工实战集训</p>
+						<img src="img/teacher-4.jpg"/>
+					</div>
+					<p>夏老师</p>
+					<span>淘宝美工设计讲师</span>
+					<span class="right fa fa-thumbs-o-up"></span>
+				</li>
+				<li>
+					<div>
+						<p>12年网页设计经验，曾为东海救助局，联合利华，纽伦堡会展等多家企业提供网站运营建设；其独特的视觉模式理念为近百家淘宝店铺传授了视觉营销技巧，策划实现了一个又一个淘宝美工实战集训</p>
+						<img src="img/teacher-1.jpg"/>
+					</div>
+					<p>夏老师</p>
+					<span>淘宝美工设计讲师</span>
+					<span class="right fa fa-thumbs-o-up"></span>
+				</li>
+				<li>
+					<div>
+						<p>12年网页设计经验，曾为东海救助局，联合利华，纽伦堡会展等多家企业提供网站运营建设；其独特的视觉模式理念为近百家淘宝店铺传授了视觉营销技巧，策划实现了一个又一个淘宝美工实战集训</p>
+						<img src="img/teacher-2.jpg"/>
+					</div>
+					<p>夏老师</p>
+					<span>淘宝美工设计讲师</span>
+					<span class="right fa fa-thumbs-o-up"></span>
+				</li>
+				<li>
+					<div>
+						<p>12年网页设计经验，曾为东海救助局，联合利华，纽伦堡会展等多家企业提供网站运营建设；其独特的视觉模式理念为近百家淘宝店铺传授了视觉营销技巧，策划实现了一个又一个淘宝美工实战集训</p>
+						<img src="img/teacher-3.jpg"/>
+					</div>
+					<p>夏老师</p>
+					<span>淘宝美工设计讲师</span>
+					<span class="right fa fa-thumbs-o-up"></span>
+				</li>
+				<li>
+					<div>
+						<p>12年网页设计经验，曾为东海救助局，联合利华，纽伦堡会展等多家企业提供网站运营建设；其独特的视觉模式理念为近百家淘宝店铺传授了视觉营销技巧，策划实现了一个又一个淘宝美工实战集训</p>
+						<img src="img/teacher-4.jpg"/>
+					</div>
+					<p>夏老师</p>
+					<span>淘宝美工设计讲师</span>
+					<span class="right fa fa-thumbs-o-up"></span>
+				</li>
+			</ul>
 		</div>
+		<div class="student kaiban w">
+			<ul class="kaiban-nav clear">
+				<li>学员作品</li>
+				<li class="active">平面UI</li>
+				<li>网页设计</li>
+				<li>室内景观</li>
+				<li>淘宝美工</li>
+				<li>机械模具</li>
+				<li>服装设计</li>
+			</ul>
+			<div class="kaiban-box">
+				<ul class="kaiban-img clear">
+					<li>
+						<div class="img">
+							<a href="#"><img src="img/student-1.jpg"/></a>
+						</div>
+						<h2>王小明学员作品</h2>
+						<p class="left">指导老师:汤老师</p>
+						<p class="right"><a href="#">查看</a>&nbsp;<span class="fa fa-angle-right"></span></p>
+					</li>
+					<li>
+						<div class="img">
+							<a href="#"><img src="img/student-2.jpg"/></a>
+						</div>
+						<h2>萧炎学员作品</h2>
+						<p class="left">指导老师:汤老师</p>
+						<p class="right"><a href="#">查看</a>&nbsp;<span class="fa fa-angle-right"></span></p>
+					</li>
+					<li>
+						<div class="img">
+							<a href="#"><img src="img/student-3.jpg"/></a>
+						</div>
+						<h2>刑天学员作品</h2>
+						<p class="left">指导老师:汤老师</p>
+						<p class="right"><a href="#">查看</a>&nbsp;<span class="fa fa-angle-right"></span></p>
+					</li>
+					<li>
+						<div class="img">
+							<a href="#"><img src="img/student-4.jpg"/></a>
+						</div>
+						<h2>张三学员作品</h2>
+						<p class="left">指导老师:汤老师</p>
+						<p class="right"><a href="#">查看</a>&nbsp;<span class="fa fa-angle-right"></span></p>
+					</li>
+				</ul>
+				<ul class="kaiban-img clear" style="background-color: red;">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<ul class="kaiban-img clear">
+					<li>
+						<div class="img">
+							<a href="#"><img src="img/student-1.jpg"/></a>
+						</div>
+						<h2>王小明学员作品</h2>
+						<p class="left">指导老师:汤老师</p>
+						<p class="right"><a href="#">查看</a>&nbsp;<span class="fa fa-angle-right"></span></p>
+					</li>
+					<li>
+						<div class="img">
+							<a href="#"><img src="img/student-2.jpg"/></a>
+						</div>
+						<h2>萧炎学员作品</h2>
+						<p class="left">指导老师:汤老师</p>
+						<p class="right"><a href="#">查看</a>&nbsp;<span class="fa fa-angle-right"></span></p>
+					</li>
+					<li>
+						<div class="img">
+							<a href="#"><img src="img/student-3.jpg"/></a>
+						</div>
+						<h2>刑天学员作品</h2>
+						<p class="left">指导老师:汤老师</p>
+						<p class="right"><a href="#">查看</a>&nbsp;<span class="fa fa-angle-right"></span></p>
+					</li>
+					<li>
+						<div class="img">
+							<a href="#"><img src="img/student-4.jpg"/></a>
+						</div>
+						<h2>张三学员作品</h2>
+						<p class="left">指导老师:汤老师</p>
+						<p class="right"><a href="#">查看</a>&nbsp;<span class="fa fa-angle-right"></span></p>
+					</li>
+				</ul>
+				<ul class="kaiban-img clear" style="background-color: gold;">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<ul class="kaiban-img clear">
+					<li>
+						<div class="img">
+							<a href="#"><img src="img/student-1.jpg"/></a>
+						</div>
+						<h2>王小明学员作品</h2>
+						<p class="left">指导老师:汤老师</p>
+						<p class="right"><a href="#">查看</a>&nbsp;<span class="fa fa-angle-right"></span></p>
+					</li>
+					<li>
+						<div class="img">
+							<a href="#"><img src="img/student-2.jpg"/></a>
+						</div>
+						<h2>萧炎学员作品</h2>
+						<p class="left">指导老师:汤老师</p>
+						<p class="right"><a href="#">查看</a>&nbsp;<span class="fa fa-angle-right"></span></p>
+					</li>
+					<li>
+						<div class="img">
+							<a href="#"><img src="img/student-3.jpg"/></a>
+						</div>
+						<h2>刑天学员作品</h2>
+						<p class="left">指导老师:汤老师</p>
+						<p class="right"><a href="#">查看</a>&nbsp;<span class="fa fa-angle-right"></span></p>
+					</li>
+					<li>
+						<div class="img">
+							<a href="#"><img src="img/student-4.jpg"/></a>
+						</div>
+						<h2>张三学员作品</h2>
+						<p class="left">指导老师:汤老师</p>
+						<p class="right"><a href="#">查看</a>&nbsp;<span class="fa fa-angle-right"></span></p>
+					</li>
+				</ul>
+				<ul class="kaiban-img clear" style="background-color: seagreen;">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+		</div>
+		<div class="jiuye teachers w clear">
+			<div class="teachersTop clear">
+				<h2 class="left">就业明星</h2>
+				<div class="right">
+					<span><a href="#">看全部</a></span>
+					<span class="fa fa-arrow-circle-o-right"></span>
+				</div>
+			</div>
+			<div class="jiuyeMX">
+
+				<div class="content">
+					<ul>
+						<li class="">
+							<div class="img">
+								<img src="img/sdt-1.jpg"/>
+								<p>赵美眉</p>
+							</div>
+							<div class="text">
+								<p>UI交互设计专业</p>
+								<p>心中有梦,路就在脚下,虽然实现"希望之梦"困难重重,但只要去探索实践,就有实现的可能,正如一句话所说:如果这生命就像一段...</p>
+								<p>就职:也买(上海)****有限公司</p>
+							</div>
+						</li>
+						<li class="">
+							<div class="img">
+								<img src="img/sdt-2.jpg"/>
+								<p>赵美眉</p>
+							</div>
+							<div class="text">
+								<p>UI交互设计专业</p>
+								<p>心中有梦,路就在脚下,虽然实现"希望之梦"困难重重,但只要去探索实践,就有实现的可能,正如一句话所说:如果这生命就像一段...</p>
+								<p>就职:也买(上海)****有限公司</p>
+							</div>
+						</li>
+						<li class="">
+							<div class="img">
+								<img src="img/sdt-3.jpg"/>
+								<p>赵美眉</p>
+							</div>
+							<div class="text">
+								<p>UI交互设计专业</p>
+								<p>心中有梦,路就在脚下,虽然实现"希望之梦"困难重重,但只要去探索实践,就有实现的可能,正如一句话所说:如果这生命就像一段...</p>
+								<p>就职:也买(上海)****有限公司</p>
+							</div>
+						</li>
+						<li class="">
+							<div class="img">
+								<img src="img/sdt-4.jpg"/>
+								<p>赵美眉</p>
+							</div>
+							<div class="text">
+								<p>UI交互设计专业</p>
+								<p>心中有梦,路就在脚下,虽然实现"希望之梦"困难重重,但只要去探索实践,就有实现的可能,正如一句话所说:如果这生命就像一段...</p>
+								<p>就职:也买(上海)****有限公司</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="left"><span class="fa fa-angle-left"></span></div>
+				<div class="right"><span class="fa fa-angle-right"></span></div>
+			</div>
+		</div>
+		<div class="honor w clear">
+			<p>非凡荣誉</p>
+			<ul>
+				<li>
+					<div class="img">
+						<img src="img/honor-1.jpg"/>
+					</div>
+					<p>信息化工程师授权培训中心</p>
+				</li>
+				<li>
+					<div class="img">
+						<img src="img/honor-2.jpg"/>
+					</div>
+					<p>上海成教协会最佳参与奖</p>
+				</li>
+				<li>
+					<div class="img">
+						<img src="img/honor-3.jpg"/>
+					</div>
+					<p>上海市徐州商会副会长单位</p>
+				</li>
+				<li>
+					<div class="img">
+						<img src="img/honor-4.jpg"/>
+					</div>
+					<p>上海市教委徐汇特色项目</p>
+				</li>
+				<li>
+					<div class="img">
+						<img src="img/honor-5.jpg"/>
+					</div>
+					<p>工信部信息化工程师授权中心</p>
+				</li>
+				<li>
+					<div class="img">
+						<img src="img/honor-6.jpg"/>
+					</div>
+					<p>国际装协杰出办学单位奖</p>
+				</li>
+				<li>
+					<div class="img">
+						<img src="img/honor-7.jpg"/>
+					</div>
+					<p>江苏师大校友会副会长单位</p>
+				</li>
+				<li>
+					<div class="img">
+						<img src="img/honor-8.jpg"/>
+					</div>
+					<p>21CN教育最佳教育品牌</p>
+				</li>
+			</ul>
+		</div>
+		<div class="school w">
+			<p>校区分布</p>
+			<ul>
+				<li>
+					<span>徐汇</span>
+					<span>
+						<p>徐家汇交大中心</p>
+						<p>电话：021-66075267  66075268</p>
+					</span>
+				</li>
+				<li>
+					<span>人广</span>
+					<span>
+						<p>人民广场中心</p>
+						<p>电话：021-63307362 63307382</p>
+					</span>
+				</li>
+				<li>
+					<span>浦东</span>
+					<span>
+						<p>浦东八佰伴中心</p>
+						<p>电话：021-58361160 58361159</p>
+					</span>
+				</li>
+				<li>
+					<span>普陀</span>
+					<span>
+						<p>普陀长寿路中心</p>
+						<p>电话：021-60193297 60193298</p>
+					</span>
+				</li>
+				<li>
+					<span>虹口</span>
+					<span>
+						<p>虹口足球场中心</p>
+						<p>电话：021-66075267  66075268</p>
+					</span>
+				</li>
+				<li>
+					<span>徐汇</span>
+					<span>
+						<p>电商事业部中心</p>
+						<p>电话：021-60498623  62120772</p>
+					</span>
+				</li>
+				<li>
+					<span>徐汇</span>
+					<span>
+						<p>企业培训部</p>
+						<p>电话：400-616-2336转8</p>
+					</span>
+				</li>
+				<li>
+					<span>徐汇</span>
+					<span>
+						<p>学果网</p>
+						<p>电话：021-60907381 60907382</p>
+					</span>
+				</li>
+			</ul>
+		</div>
+		<div class="cooperate w clear">
+			<p>合作企业</p>
+			<div class="box">
+				<div class="content">
+					<ul>
+						<li>
+							<div class="img">
+								<img src="img/qy-1.jpg"/>
+							</div>
+						</li>
+						<li>
+							<div class="img">
+								<img src="img/qy-2.jpg"/>
+							</div>
+						</li>
+						<li>
+							<div class="img">
+								<img src="img/qy-3.jpg"/>
+							</div>
+						</li>
+						<li>
+							<div class="img">
+								<img src="img/qy-4.jpg"/>
+							</div>
+						</li>
+						<li>
+							<div class="img">
+								<img src="img/qy-5.jpg"/>
+							</div>
+						</li>
+						<li>
+							<div class="img">
+								<img src="img/qy-6.jpg"/>
+							</div>
+						</li>
+						<li>
+							<div class="img">
+								<img src="img/qy-7.jpg"/>
+							</div>
+						</li>
+						<li>
+							<div class="img">
+								<img src="img/qy-8.jpg"/>
+							</div>
+						</li>
+						<li>
+							<div class="img">
+								<img src="img/qy-9.jpg"/>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="left"><span class="fa fa-angle-left"></span></div>
+				<div class="right"><span class="fa fa-angle-right"></span></div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="content_footer w">
+			<ul class="ll_1">
+				<li>
+					<span><img src="img/db1.png"/></span>
+					<span>
+						<p>正规资质</p>
+						<p>学院信誉有保障</p>
+					</span>
+				</li>
+				<li>
+					<span><img src="img/db2.png"/></span>
+					<span>
+						<p>权威证书</p>
+						<p>求职晋升有保障</p>
+					</span>
+				</li>
+				<li>
+					<span><img src="img/db3.png"/></span>
+					<span>
+						<p>免费试学</p>
+						<p>提前体验上手快</p>
+					</span>
+				</li>
+				<li>
+					<span><img src="img/db4.png"/></span>
+					<span>
+						<p>教学监控</p>
+						<p>ppha闭环学习系统</p>
+					</span>
+				</li>
+				<li>
+					<span><img src="img/db5.png"/></span>
+					<span>
+						<p>免费重修</p>
+						<p>不用担心学不会</p>
+					</span>
+				</li>
+				<li>
+					<span><img src="img/db6.png"/></span>
+					<span>
+						<p>签约就业</p>
+						<p>入学即签推荐协议</p>
+					</span>
+				</li>
+			</ul>
+			<ul class="ll_2 clear">
+				<li>
+					<a href="#">学院介绍</a>
+					<a href="#">学院简介</a>
+					<a href="#">文化风采</a>
+					<a href="#">办学特色</a>
+					<a href="#">发展历程</a>
+					<a href="#">新闻媒体</a>
+					<a href="#">校区分布</a>
+					<a href="#">加入我们</a>
+				</li>
+				<li>
+					<a href="#">课程导航</a>
+					<a href="#">平面UI</a>
+					<a href="#">电商网销</a>
+					<a href="#">网页设计</a>
+					<a href="#">室内景观</a>
+					<a href="#">淘宝美工</a>
+					<a href="#">机械模具</a>
+					<a href="#">服装设计</a>
+					<a href="#">网络工程</a>
+					<a href="#">影视美术</a>
+				</li>
+				<li>
+					<a href="#">师资力量</a>
+					<a href="#">师资团队</a>
+					<a href="#">自编教材</a>
+					<a href="#">教学模式</a>
+				</li>
+				<li>
+					<a href="#">学员作品</a>
+					<a href="#">平面 UI</a>
+					<a href="#">网页设计</a>
+					<a href="#">室内景观</a>
+					<a href="#">淘宝美工</a>
+					<a href="#">机械模具</a>
+					<a href="#">服装设计</a>
+				</li>
+				<li>
+					<a href="#">证书学历</a>
+					<a href="#">学历介绍</a>
+					<a href="#">证书样本</a>
+					<a href="#">考试模拟</a>
+				</li>
+				<li>
+					<a href="#">就业信息</a>
+					<a href="#">就业明星</a>
+					<a href="#">就业流程</a>
+					<a href="#">就业保障</a>
+					<a href="#">企业招聘</a>
+					<a href="#">职场资讯</a>
+				</li>
+				<li>
+					<a href="#">入学须知</a>
+					<a href="#">入学条件</a>
+					<a href="#">付款方式</a>
+					<a href="#">食宿情况</a>
+					<a href="#">申请贷款</a>
+					<a href="#">常见问答</a>
+					<a href="#">校区环境</a>
+					<a href="#">联系我们</a>
+				</li>
+				<li>
+					<div class="img">
+						<img src="img/logo-1.jpg"/>
+					</div>
+					<p class="p1">400-616-2336</p>
+					<p class="p2">周一至周日9:00-20:00</p>
+				</li>
+			</ul>
+			<ul class="ll_3">
+				<li>友情链接</li>
+				<li>
+					<a href="">学院微信</a>
+					<a href="">学院微博</a>
+					<a href="">非凡电商学院</a>
+					<a href="">上海培训通</a>
+					<a href="">会计考试</a>
+					<a href="">千里眼网</a>
+					<a href="">全国IT培训</a>
+					<a href="">全国网络营销培训</a>
+					<a href="">上海分类信息网</a>
+					<a href="">上海淘宝培训</a>
+					<a href="">上海培训世界</a>
+					<a href="">上海培训网</a>
+					<a href="">上海自助建站</a>
+					<a href="">新课教育网</a>
+					<a href="">连云港培训中心</a>
+					<a href="">教师资格证考试网</a>
+					<a href="">360搜课网</a>
+					<a href="">学果网</a>
+					<a href="">申请友链>></a>
+				</li>
+			</ul>
+			<ul class="ll_4">
+				<li>
+					<p>Copyright 2015-2020 feifanedu.com.cn ©All Rights Reserved. 上海非凡进修学院 版权所有 沪ICP备12039090号-1</p>
+					<p>法律顾问：上海明迈律师事务所 蔡俊芳律师</p>
+					<img src="img/cp.jpg"/>
+				</li>
+				
+			</ul>
+		</div>
+		</div>
+	
 	</body>
 </html>
