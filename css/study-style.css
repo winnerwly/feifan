@@ -1,0 +1,124 @@
+.content{
+	/*background-color: #CCCCCC;*/
+}
+.content .left{
+	width: 220px;
+	border: 1px solid #EAEAEA;
+	/*height: 386px;*/
+}
+.content .right{
+	width: 950px;
+	border: 1px solid #EAEAEA;
+}
+/*左边部分*/
+
+.content .left h2{
+	border-bottom: 1px #EAEAEA solid;
+	font-size: 16px;
+	line-height: 50px;
+	padding-left: 30px;
+	color: #333333;
+}
+.content .left h2 span{
+	margin-left: 74px;
+	color: #e32725;
+}
+.content .left ul{}
+.content .left ul li{
+	height: 42px;
+	font-size: 12px;
+	line-height: 42px;
+	padding-left: 30px;
+}
+.content .left ul li:hover{
+	background-color: #f3f3f3;
+}
+.content .left ul li.hover{
+	background-color: #f3f3f3;
+}
+.content .left ul li:hover a{
+	color: #e32725;
+}
+.content .left ul li.hover a{
+	color: #e32725;
+}
+/*右边主题部分*/
+.content .right h2{
+	border-bottom: 1px #EAEAEA solid;
+	font-size: 16px;
+	line-height: 50px;
+	padding-left: 22px;
+	color: #333333;
+}
+.content .right h2 input:first-child{
+	margin-left: 600px;
+	height: 20px;
+	border: 1px #9C9C9C solid;
+}
+.content .right h2 label{
+	font-size: 12px;
+}
+.content .right ul{
+	padding: 0px 24px;
+}
+.content .right ul li{
+	height: 164px;
+	border-bottom: 1px #EAEAEA solid;
+}
+.content .right ul li .box-left{
+	width: 710px;
+	color: #979797;
+	display: inline-block;
+}
+.content .right ul li .box-left h1{
+	font-size: 16px;
+	color: #333333;
+	line-height: 50px;
+}
+.content .right ul li .box-left p{
+	font-size: 12px;
+	line-height: 22px;
+}
+.content .right ul li .box-left>span{
+	font-size: 12px;
+	margin-right: 28px;
+	line-height: 40px;
+}
+.content .right ul li:last-child{
+	border: 0px;
+	text-align: center;
+	padding: 40px 0px;
+}
+.content .right ul li:last-child span{
+	font-size: 12px;
+	line-height: 38px;
+	padding: 0px 30px;
+	border-radius: 3px;
+	border: 1px #999999 solid;
+	display: inline-block;
+	margin: 0px 5px;
+}
+.content .right ul li:last-child span.active{
+	background-color: #dd2726;
+	color: #FFFFFF;
+}
+.content .right ul li:last-child span.noneactive{
+	background-color: #e3e3e3;
+	color: #222;
+}
+.content .right ul li .box-right{
+	display: inline-block;
+	margin-left: 50px;
+	margin-top: 30px;
+}
+.content .right ul li .box-right img{
+	width: 115px;
+	height: 115px;
+	border-radius: 50%;
+}
+
+
+
+
+
+
