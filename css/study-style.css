@@ -87,7 +87,8 @@
 .content .right ul li:last-child{
 	border: 0px;
 	text-align: center;
-	padding: 40px 0px;
+	padding: 40px 0px 0px;
+	height: 80px;
 }
 .content .right ul li:last-child span{
 	font-size: 12px;
