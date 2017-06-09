@@ -60,24 +60,24 @@ $(document).ready(function() {
 
 	tabKaiban.hover(function() {
 		var eee = $(this).index();
-		if (eee>0) {
+		if(eee > 0) {
 			tabKaiban.removeClass("active").eq(eee).addClass("active");
-			kaibanImg.hide().eq(eee-1).show();
+			kaibanImg.hide().eq(eee - 1).show();
 		}
 	});
 	//设置图片以中心点放大
 	var img = $(".kaiban .kaiban-img .img img");
 	var imgW = img.width();
 	var imgH = img.height();
-	imgW2 = imgW + 40;
-	imgH2 = imgH + 40;
+	imgW2 =1.3*imgW;
+	imgH2 =1.3*imgH;
 	img.hover(function() {
 		$(this).stop().animate({
 			height: imgH2,
 			width: imgW2,
-			left: "-20px",
-			top: "-20px"
-		}, 200);
+			left: -0.3*imgW/2+"px",
+			top: -0.3*imgH/2+"px"
+		},500);
 	}, function() {
 		$(this).stop().animate({
 			height: imgH,
@@ -93,35 +93,75 @@ $(document).ready(function() {
 	lunbo.width(lunboLi.width() * lunboLi.length + "px");
 	var lunboWidth = lunbo.width();
 
-	lunbo.animate({
-		left: -lunboLi.width() * lunboLi.length + "px"
-	}, 70000, 'linear', function() {
-		lunbo.css("left", "1200px")
-	});
-	setInterval(function() {
-		lunbo.animate({left: -lunboLi.width() * lunboLi.length + "px"}, 70000, 'linear', function() {
-			lunbo.css("left", "1200px")
+
+	scrollD();
+	function scrollD() {
+		lunbo.animate({
+			"margin-left": (lunboLi.width()+20) * -1 + "px"
+		}, 4000, 'linear', function() {
+			$(".kaiban-lunbo ul li:eq(0)").appendTo(lunbo);
+			lunbo.css({"margin-left": 0});
 		})
-	}, 70000);
+	};
+	var time4=setInterval(scrollD, 4000);
+	lunbo.hover(function(){
+		lunbo.stop();
+		clearInterval(time4);
+	},function(){
+		lunbo.css({"margin-left": 0});
+		scrollD();
+		time4=setInterval(scrollD, 4000);
+	});
+//	lunbo.animate({
+//		left: -lunboLi.width() * lunboLi.length + "px"
+//	}, 70000, 'linear', function() {
+//		lunbo.css("left", "1200px")
+//	});
+//	setInterval(function() {
+//		lunbo.animate({
+//			left: -lunboLi.width() * lunboLi.length + "px"
+//		}, 70000, 'linear', function() {
+//			lunbo.css("left", "1200px")
+//		})
+//	}, 70000);
 	//师资力量部分,教师图片轮播效果
-	var teacher=$(".teachers .teacher");
-	var teacherLi=$(".teachers .teacher li");
-	var tcW=teacherLi.width()+40;
-	var tcW2=tcW*(-4);
-	var tcL=teacherLi.length;
-	var tcL2=parseInt(tcL/4+1);
-	
-	var but_tc1=$(".fa-caret-left");
-	var but_tc2=$(".fa-caret-right");
-	
-	teacher.width(tcW*tcL+"px");
-	aaa=0;
-	var lunbo=setInterval(function(){
-			aaa=(aaa+1)%tcL2;
-			teacher.animate({
-				left:aaa*tcW2+"px"
-			},2000)
-		},8000);
+
+	var teacher = $(".teachers .teacher");
+	var teacherLi = $(".teachers .teacher li");
+	var tcW = teacherLi.width() + 40;
+	var tcW2 = tcW * (-4);
+	var tcL = teacherLi.length;
+	var tcL2 = parseInt(tcL / 4 + 1);
+
+	var but_tc1 = $(".fa-caret-left");
+	var but_tc2 = $(".fa-caret-right");
+
+	teacher.width(tcW * tcL + "px");
+
+	function scroll() {
+		$(".teachers .teacher").animate({
+			"margin-left": tcW * -1 + "px"
+		}, 500, function() {
+			$(".teachers .teacher li:eq(0)").appendTo($(".teachers .teacher"));
+			$(".teachers .teacher").css({
+				"margin-left": 0
+			});
+		})
+	};
+	var time1=setInterval(scroll, 3000);
+	teacher.hover(function(){
+		clearInterval(time1);
+	},function(){
+		time1=setInterval(scroll, 3000);
+	});
+
+	//	aaa=0;
+	//	var lunbo=setInterval(function(){
+	//			aaa=(aaa+1)%tcL2;
+	//			teacher.animate({
+	//				left:aaa*tcW2+"px"
+	//			},2000)
+	//		},8000);
 	//学生作品部分
 	var tabKaiban2 = $(".student .kaiban-nav li");
 	var kaibanImg2 = $(".student .kaiban-box .kaiban-img");
@@ -134,30 +174,70 @@ $(document).ready(function() {
 		}
 	});
 	//就业明星
-	var jiuyeMX=$(".jiuyeMX .content ul");
-	var jiuyeMXLI=$(".jiuyeMX .content ul li");
+	var jiuyeMX = $(".jiuyeMX .content ul");
+	var jiuyeMXLI = $(".jiuyeMX .content ul li");
+
+	jiuyeMX.width((jiuyeMXLI.width() + 63) * jiuyeMXLI.length);
+	bbb = 0;
+//	setInterval(function() {
+//		bbb = (bbb + 1) % jiuyeMXLI.length;
+//		jiuyeMX.animate({
+//			left: bbb * (-1) * (jiuyeMXLI.width() + 63) + "px"
+//		}, 500)
+//	}, 3000);
 	
-	jiuyeMX.width((jiuyeMXLI.width()+63)*jiuyeMXLI.length);
-	bbb=0;
-	setInterval(function(){
-		bbb=(bbb+1)%jiuyeMXLI.length;
-		jiuyeMX.animate({
-			left:bbb*(-1)*(jiuyeMXLI.width()+63)+"px"
-		},500)
-	},3000);
+	
+	function scrollA() {
+		$(".jiuyeMX .content ul").animate({
+			"margin-left": (jiuyeMXLI.width() + 63) * -1 + "px"
+		}, 500, function() {
+			$(".jiuyeMX .content ul li:eq(0)").appendTo($(".jiuyeMX .content ul"));
+			$(".jiuyeMX .content ul").css({
+				"margin-left": 0
+			});
+		})
+	};
+	
+	var time2=setInterval(scrollA,2000);
+	jiuyeMX.hover(function(){
+		clearInterval(time2);
+	},function(){
+		time2=setInterval(scrollA, 3000);
+	});
+	
 	//合作企业
+
+	var cpUL = $(".cooperate .box .content ul");
+	var cpLI = $(".cooperate .box .content ul li");
+
+	cpUL.width(cpLI.width() * cpLI.length + "px");
+
+//	ccc = 0;
+//	setInterval(function() {
+//		ccc = (ccc + 1) % cpLI.length;
+//		cpUL.animate({
+//			left: ccc * (-1) * cpLI.width() + "px"
+//		}, 500)
+//	}, 1000);
 	
-	var cpUL=$(".cooperate .box .content ul");
-	var cpLI=$(".cooperate .box .content ul li");
-	
-	cpUL.width(cpLI.width()*cpLI.length+"px");
-	
-	ccc=0;
-	setInterval(function(){
-		ccc=(ccc+1)%cpLI.length;
+		function scrollB() {
 		cpUL.animate({
-			left:ccc*(-1)*cpLI.width()+"px"
-		},500)
-	},1000);
+			"margin-left": cpLI.width() * -1 + "px"
+		}, 500, function() {
+			$(".cooperate .box .content ul li:eq(0)").appendTo(cpUL);
+			cpUL.css({
+				"margin-left": 0
+			});
+		})
+	};
+	
+	var time3=setInterval(scrollB,1000);
+	cpUL.hover(function(){
+		clearInterval(time3);
+	},function(){
+		time3=setInterval(scrollB, 1000);
+	});
+	
+	
 	
 })
