@@ -1,0 +1,95 @@
+.box ul {
+	margin-bottom: 20px;
+}
+
+.box ul li {
+	width: 288px;
+	height: 260px;
+	margin: 0 14.3px;
+	box-sizing: border-box;
+	border: 1px solid rgba(0, 0, 0, 0);
+	/*background-color: blueviolet;*/
+	float: left;
+	padding: 8px;
+	transition: none;
+}
+.box ul li:hover {
+	border-color: #EAEAEA;
+}
+
+.box ul li div {
+	overflow: hidden;
+	width: 270px;
+	height: 180px;
+	position: relative;
+}
+
+.box ul li div a {}
+
+.box ul li div a img {
+	position: absolute;
+	width: 270px;
+	height: 180px;
+}
+
+.box ul li h5 {
+	/*font-weight: normal;*/
+	font-size: 12px;
+	margin-top: 16px;
+	padding-left: 2px;
+	margin-bottom: 10px;
+	color: #505050;
+}
+
+.box ul li p {
+	padding-left: 2px;
+	font-size: 10px;
+	color: #999999;
+}
+
+.box ul li p.leftp {
+	float: left;
+}
+
+.box ul li p.rightp {
+	float: right;
+}
+
+.box ul li p.rightp a {
+	color: #999999;
+}
+
+.box ul li p.rightp span{}
+
+
+.box .footli{
+	border: 0px;
+	text-align: center;
+	padding: 40px 0px 0px;
+	height: 80px;
+}
+.box .footli span{
+	cursor: pointer;
+	font-size: 12px;
+	line-height: 38px;
+	padding: 0px 30px;
+	border-radius: 3px;
+	border: 1px #999999 solid;
+	display: inline-block;
+	margin: 0px 5px;
+	color: #666666;
+}
+.box .footli span a{
+	color: #666666;
+	
+}
+.box .footli span.active{
+	background-color: #dd2726;
+}
+.box .footli span.active a{
+	color: #FFFFFF;
+}
+.box .footli span.noneactive{
+	background-color: #e3e3e3;
+	color: #222;
+}

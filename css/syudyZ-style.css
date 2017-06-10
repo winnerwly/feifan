@@ -1,0 +1,56 @@
+.content .right>div{
+	padding:30px 30px;
+}
+.content .right .article{
+	font-size: 14px;
+}
+.content .right .article h1{
+	font-size: 22px;
+	line-height: 40px;
+	text-align: center;
+	font-weight: normal;
+}
+.content .right .article h4{
+	font-size: 14px;
+	line-height: 22px;
+	margin: 10px 0;
+	text-align: center;
+	font-weight: normal;
+}
+.content .right .article h4 span{
+	display: inline-block;
+	padding: 0px 10px;
+}
+.content .right .article p{
+	font-size: 14px;
+	line-height: 1.8em;
+	margin-bottom: 1.8em;
+	text-indent: 2em;
+	
+}
+.content .right .article .img{
+	margin-bottom: 1.8em;
+	text-align: center;
+}
+.content .right .article .img img{
+	max-width: 800px;
+}
+
+.content .right .xiangguan{}
+.content .right .xiangguan p{
+	font-size: 16px;
+	line-height: 1.8em;
+}
+.content .right .xiangguan a{
+	color: #51B8F1;
+	font-size: 14px;
+	line-height: 1.8px;
+}
+.content .right .aa p{
+	font-size: 14px;
+}
+.content .right .hr{
+	border-bottom: 1px solid #EAEAEA;
+	display: block;
+	margin: 0px 30px;
+}

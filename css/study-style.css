@@ -1,63 +1,3 @@
-.content{
-	/*background-color: #CCCCCC;*/
-}
-.content .left{
-	width: 220px;
-	border: 1px solid #EAEAEA;
-	/*height: 386px;*/
-}
-.content .right{
-	width: 950px;
-	border: 1px solid #EAEAEA;
-}
-/*左边部分*/
-
-.content .left h2{
-	border-bottom: 1px #EAEAEA solid;
-	font-size: 16px;
-	line-height: 50px;
-	padding-left: 30px;
-	color: #333333;
-}
-.content .left h2 span{
-	margin-left: 74px;
-	color: #e32725;
-}
-.content .left ul{}
-.content .left ul li{
-	height: 42px;
-	font-size: 12px;
-	line-height: 42px;
-	padding-left: 30px;
-}
-.content .left ul li:hover{
-	background-color: #f3f3f3;
-}
-.content .left ul li.hover{
-	background-color: #f3f3f3;
-}
-.content .left ul li:hover a{
-	color: #e32725;
-}
-.content .left ul li.hover a{
-	color: #e32725;
-}
-/*右边主题部分*/
-.content .right h2{
-	border-bottom: 1px #EAEAEA solid;
-	font-size: 16px;
-	line-height: 50px;
-	padding-left: 22px;
-	color: #333333;
-}
-.content .right h2 input:first-child{
-	margin-left: 600px;
-	height: 20px;
-	border: 1px #9C9C9C solid;
-}
-.content .right h2 label{
-	font-size: 12px;
-}
 .content .right ul{
 	padding: 0px 24px;
 }
@@ -70,16 +10,22 @@
 	color: #979797;
 	display: inline-block;
 }
-.content .right ul li .box-left h1{
+.content .right ul li .box-left h1 a{
+	font-weight: normal;
 	font-size: 16px;
-	color: #333333;
+	color: #555;
 	line-height: 50px;
 }
+.content .right ul li .box-left h1:hover a{
+	color:#dd2727 ;
+}
 .content .right ul li .box-left p{
+	cursor: pointer;
 	font-size: 12px;
 	line-height: 22px;
 }
 .content .right ul li .box-left>span{
+	cursor: pointer;
 	font-size: 12px;
 	margin-right: 28px;
 	line-height: 40px;
@@ -91,6 +37,7 @@
 	height: 80px;
 }
 .content .right ul li:last-child span{
+	cursor: pointer;
 	font-size: 12px;
 	line-height: 38px;
 	padding: 0px 30px;
@@ -98,9 +45,16 @@
 	border: 1px #999999 solid;
 	display: inline-block;
 	margin: 0px 5px;
+	color: #666666;
+}
+.content .right ul li:last-child span a{
+	color: #666666;
+	
 }
 .content .right ul li:last-child span.active{
 	background-color: #dd2726;
+}
+.content .right ul li:last-child span.active a{
 	color: #FFFFFF;
 }
 .content .right ul li:last-child span.noneactive{
@@ -117,9 +71,3 @@
 	height: 115px;
 	border-radius: 50%;
 }
-
-
-
-
-
-

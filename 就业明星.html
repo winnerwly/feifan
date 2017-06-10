@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+		<link rel="stylesheet" type="text/css" href="css/header-style.css" />
+		<link rel="stylesheet" type="text/css" href="css/index-style.css" />
+		<link rel="stylesheet" type="text/css" href="css/footer-style.css" />
+		<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				//就业明星
+				var jiuyeMX = $(".jiuyeMX .content ul");
+				var jiuyeMXLI = $(".jiuyeMX .content ul li");
+
+				//用js动态的给ul添加一个width值
+				jiuyeMX.width((jiuyeMXLI.width() + 63) * jiuyeMXLI.length);
+				
+				//设置一个动画函数,方便之后的调用
+				function scrollA() {
+					$(".jiuyeMX .content ul").animate({"margin-left": (jiuyeMXLI.width() + 63) * -1 + "px"}, 500, function() {
+						$(".jiuyeMX .content ul li:eq(0)").appendTo($(".jiuyeMX .content ul"));
+						$(".jiuyeMX .content ul").css({"margin-left": 0});
+					})
+				};
+
+				var time2 = setInterval(scrollA, 5000);
+				$(".jiuyeMX").hover(function() {
+					clearInterval(time2);
+				}, function() {
+					time2 = setInterval(scrollA, 5000);
+				});
+
+				var jiuyeLfet = $(".jiuye .jiuyeMX .left");
+				var jiuyeRight = $(".jiuye .jiuyeMX .right");
+				
+				//定义左点击ul向左滑动
+				jiuyeLfet.click(function() {
+					$(".jiuyeMX .content ul").animate({"margin-left": (jiuyeMXLI.width() + 63) * -1 + "px"}, 500, function() {
+						$(".jiuyeMX .content ul li:eq(0)").appendTo($(".jiuyeMX .content ul"));
+						$(".jiuyeMX .content ul").css({"margin-left": 0});
+					})
+				});
+				
+				//定义右点击ul向右滑动
+				jiuyeRight.click(function() {
+					$(".jiuyeMX .content ul").animate({"margin-left": (jiuyeMXLI.width() + 63) + "px"}, 500, function() {
+						$(".jiuyeMX .content ul li:last-child").prependTo($(".jiuyeMX .content ul"));
+						$(".jiuyeMX .content ul").css({"margin-left": 0});
+					})
+				});
+
+			});
+		</script>
+	</head>
+
+	<body>
+		<div class="jiuye teachers w clear">
+			<div class="teachersTop clear">
+				<h2 class="left">就业明星</h2>
+				<div class="right">
+					<span><a href="#">看全部</a></span>
+					<span class="fa fa-arrow-circle-o-right"></span>
+				</div>
+			</div>
+			<div class="jiuyeMX">
+
+				<div class="content">
+					<ul>
+						<li class="">
+							<div class="img">
+								<img src="img/sdt-1.jpg" />
+								<p>赵美眉</p>
+							</div>
+							<div class="text">
+								<p>UI交互设计专业</p>
+								<p>心中有梦,路就在脚下,虽然实现"希望之梦"困难重重,但只要去探索实践,就有实现的可能,正如一句话所说:如果这生命就像一段...</p>
+								<p>就职:也买(上海)****有限公司</p>
+							</div>
+						</li>
+						<li class="">
+							<div class="img">
+								<img src="img/sdt-2.jpg" />
+								<p>赵美眉</p>
+							</div>
+							<div class="text">
+								<p>UI交互设计专业</p>
+								<p>心中有梦,路就在脚下,虽然实现"希望之梦"困难重重,但只要去探索实践,就有实现的可能,正如一句话所说:如果这生命就像一段...</p>
+								<p>就职:也买(上海)****有限公司</p>
+							</div>
+						</li>
+						<li class="">
+							<div class="img">
+								<img src="img/sdt-3.jpg" />
+								<p>赵美眉</p>
+							</div>
+							<div class="text">
+								<p>UI交互设计专业</p>
+								<p>心中有梦,路就在脚下,虽然实现"希望之梦"困难重重,但只要去探索实践,就有实现的可能,正如一句话所说:如果这生命就像一段...</p>
+								<p>就职:也买(上海)****有限公司</p>
+							</div>
+						</li>
+						<li class="">
+							<div class="img">
+								<img src="img/sdt-4.jpg" />
+								<p>赵美眉</p>
+							</div>
+							<div class="text">
+								<p>UI交互设计专业</p>
+								<p>心中有梦,路就在脚下,虽然实现"希望之梦"困难重重,但只要去探索实践,就有实现的可能,正如一句话所说:如果这生命就像一段...</p>
+								<p>就职:也买(上海)****有限公司</p>
+							</div>
+						</li>
+					
+						<li class="">
+							<div class="img">
+								<img src="img/sdt-1.jpg" />
+								<p>赵美眉</p>
+							</div>
+							<div class="text">
+								<p>UI交互设计专业</p>
+								<p>心中有梦,路就在脚下,虽然实现"希望之梦"困难重重,但只要去探索实践,就有实现的可能,正如一句话所说:如果这生命就像一段...</p>
+								<p>就职:也买(上海)****有限公司</p>
+							</div>
+						</li>
+						<li class="">
+							<div class="img">
+								<img src="img/sdt-2.jpg" />
+								<p>赵美眉</p>
+							</div>
+							<div class="text">
+								<p>UI交互设计专业</p>
+								<p>心中有梦,路就在脚下,虽然实现"希望之梦"困难重重,但只要去探索实践,就有实现的可能,正如一句话所说:如果这生命就像一段...</p>
+								<p>就职:也买(上海)****有限公司</p>
+							</div>
+						</li>
+						<li class="">
+							<div class="img">
+								<img src="img/sdt-3.jpg" />
+								<p>赵美眉</p>
+							</div>
+							<div class="text">
+								<p>UI交互设计专业</p>
+								<p>心中有梦,路就在脚下,虽然实现"希望之梦"困难重重,但只要去探索实践,就有实现的可能,正如一句话所说:如果这生命就像一段...</p>
+								<p>就职:也买(上海)****有限公司</p>
+							</div>
+						</li>
+						<li class="">
+							<div class="img">
+								<img src="img/sdt-4.jpg" />
+								<p>赵美眉</p>
+							</div>
+							<div class="text">
+								<p>UI交互设计专业</p>
+								<p>心中有梦,路就在脚下,虽然实现"希望之梦"困难重重,但只要去探索实践,就有实现的可能,正如一句话所说:如果这生命就像一段...</p>
+								<p>就职:也买(上海)****有限公司</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="left"><span class="fa fa-angle-left"></span></div>
+				<div class="right"><span class="fa fa-angle-right"></span></div>
+			</div>
+		</div>
+	</body>
+
+</html>
